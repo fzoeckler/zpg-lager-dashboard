@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T20:50:23+02:00",
+  "generated_at": "2026-07-19T21:01:07+02:00",
   "window_start": "2026-07-19",
   "window_end": "2026-08-02",
   "calendars": {
@@ -39,8 +39,8 @@
       "article_total_qty": 2065,
       "subprojects": [
         "Beschallungstechnik - Rip Curl Version",
-        "Funkgeräte",
         "Follow Spot",
+        "Funkgeräte",
         "Podcast Audio",
         "Podcast Audio 2"
       ],
