@@ -350,7 +350,6 @@ HTML = f"""<!DOCTYPE html>
     <div class="tab active" data-view="pack">📦 Zu packen</div>
     <div class="tab" data-view="plan">📊 Zeitplan</div>
     <div class="tab" data-view="cal">📅 Kalender</div>
-    <div class="tab" data-view="live">🗓️ Live-Kalender</div>
     <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
   </div>
 
@@ -386,11 +385,6 @@ HTML = f"""<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- Live Google Kalender -->
-    <section class="view" id="live">
-      <div class="embed-hint">Live aus Google Kalender (Team · Logistik · Abwesenheit). <b>Hinweis:</b> Zeigt nur Termine, wenn das Gerät in einem ZPG-Google-Konto angemeldet ist oder die Kalender öffentlich freigegeben sind.</div>
-      <iframe id="gcal" loading="lazy" src=""></iframe>
-    </section>
   </main>
 </div>
 
