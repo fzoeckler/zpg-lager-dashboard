@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>ZPG Lager-Dashboard</title>
+<style>
+  :root{ --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --txt:#f4f6fb; --mut:#9aa3b2; --org:#FF7912; --line:#2a2f3a; }
+  *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+  html,body{ height:100%; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         background:var(--bg); color:var(--txt); overflow:hidden; }
+  .wrap{ display:flex; flex-direction:column; height:100vh; }
+
+  header{ display:flex; align-items:center; gap:20px; padding:14px 26px; background:linear-gradient(180deg,#12151c,#0f1115);
+           border-bottom:2px solid var(--line); flex:0 0 auto; }
+  .logo{ font-weight:800; font-size:26px; letter-spacing:2px; }
+  .logo b{ color:var(--org); }
+  .logo span{ color:var(--mut); font-weight:600; font-size:15px; letter-spacing:1px; }
+  .spacer{ flex:1; }
+  .clock{ font-variant-numeric:tabular-nums; font-weight:700; font-size:30px; letter-spacing:1px; }
+  .cdate{ color:var(--mut); font-size:14px; text-align:right; }
+  .stand{ color:var(--mut); font-size:12px; text-align:right; margin-top:2px; }
+  .live{ display:inline-block; width:9px; height:9px; border-radius:50%; background:#3ED97B; margin-right:6px;
+          box-shadow:0 0 0 0 rgba(62,217,123,.7); animation:pulse 2.2s infinite; }
+  @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(62,217,123,.6)} 70%{box-shadow:0 0 0 12px rgba(62,217,123,0)} 100%{box-shadow:0 0 0 0 rgba(62,217,123,0)} }
+
+  .tabs{ display:flex; gap:10px; padding:12px 26px 0; flex:0 0 auto; }
+  .tab{ font-size:20px; font-weight:700; padding:14px 26px; border-radius:14px 14px 0 0; background:var(--panel);
+         color:var(--mut); cursor:pointer; user-select:none; border:2px solid transparent; border-bottom:none; }
+  .tab.active{ background:var(--panel2); color:var(--txt); border-color:var(--line); }
+  .tab.active::after{ content:""; display:block; height:3px; background:var(--org); border-radius:2px; margin-top:8px; }
+  .autobtn{ margin-left:auto; font-size:14px; font-weight:600; color:var(--mut); background:var(--panel); border:2px solid var(--line);
+             border-radius:10px; padding:8px 14px; cursor:pointer; align-self:center; }
+  .autobtn.on{ color:#0f1115; background:var(--org); border-color:var(--org); }
+
+  main{ flex:1; overflow:hidden; padding:0 26px 22px; }
+  .view{ display:none; height:100%; background:var(--panel2); border:2px solid var(--line); border-radius:0 14px 14px 14px; overflow:hidden; }
+  .view.active{ display:flex; flex-direction:column; }
+  .scroll{ overflow-y:auto; padding:20px 22px; }
+
+  /* --- Packliste --- */
+  .summary{ display:flex; gap:26px; padding:16px 22px; border-bottom:2px solid var(--line); flex:0 0 auto; align-items:baseline; }
+  .summary .big{ font-size:34px; font-weight:800; color:var(--org); margin-right:8px; }
+  .summary .lbl{ font-size:15px; color:var(--mut); }
+  .summary .grp{ display:flex; align-items:baseline; }
+  .summary .sep{ color:var(--line); font-size:28px; }
+
+  .card{ display:grid; grid-template-columns:112px 1fr 168px; gap:22px; align-items:stretch;
+          background:var(--panel); border:1px solid var(--line); border-left:8px solid var(--accent);
+          border-radius:14px; padding:18px 20px; margin-bottom:16px; }
+  .raus{ text-align:center; display:flex; flex-direction:column; justify-content:center;
+          background:#12151c; border-radius:12px; padding:10px 6px; }
+  .raus-wd{ font-size:14px; color:var(--mut); font-weight:700; text-transform:uppercase; }
+  .raus-day{ font-size:46px; font-weight:800; line-height:1; }
+  .raus-mon{ font-size:16px; color:var(--mut); font-weight:700; text-transform:uppercase; }
+  .countdown{ margin-top:8px; font-size:13px; font-weight:800; padding:4px 8px; border-radius:20px;
+               background:#232833; color:var(--txt); }
+  .countdown.soon{ background:#3a2a12; color:#ffb454; }
+  .countdown.now{ background:#4a1e1e; color:#ff7a7a; }
+  .mid{ display:flex; flex-direction:column; justify-content:center; min-width:0; }
+  .pname{ font-size:24px; font-weight:800; line-height:1.15; }
+  .meta{ color:var(--mut); font-size:15px; margin:4px 0 8px; }
+  .dates{ font-size:16px; line-height:1.7; }
+  .ico{ opacity:.8; }
+  .subs{ margin-top:10px; display:flex; flex-wrap:wrap; gap:6px; }
+  .chip{ font-size:12px; background:#232833; color:var(--mut); padding:4px 9px; border-radius:20px; }
+  .badge.dry{ font-size:12px; vertical-align:middle; background:#2a3550; color:#8fb8ff; padding:3px 9px; border-radius:6px; font-weight:700; }
+  .qty{ display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+         background:#12151c; border-radius:12px; }
+  .qty-num{ font-size:52px; font-weight:800; color:var(--org); line-height:1; }
+  .qty-lbl{ font-size:15px; color:var(--mut); font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+  .qty-pos{ font-size:13px; color:var(--mut); margin-top:8px; }
+  .empty{ text-align:center; color:var(--mut); font-size:22px; padding:60px 20px; }
+
+  /* --- Agenda --- */
+  .agenda-day{ margin-bottom:22px; }
+  .aday-head{ font-size:18px; font-weight:800; color:var(--org); padding-bottom:8px; border-bottom:1px solid var(--line); margin-bottom:10px; }
+  .event{ display:flex; align-items:center; gap:14px; padding:11px 12px; border-left:4px solid var(--cal);
+           background:var(--panel); border-radius:8px; margin-bottom:8px; }
+  .etime,.allday{ font-variant-numeric:tabular-nums; font-weight:700; min-width:120px; color:var(--txt); font-size:16px; }
+  .allday{ color:var(--mut); }
+  .esum{ flex:1; font-size:17px; }
+  .ecal{ font-size:12px; font-weight:700; color:#0f1115; padding:3px 10px; border-radius:20px; }
+
+  iframe{ width:100%; height:100%; border:0; background:#0f1115; }
+  .embed-hint{ font-size:13px; color:var(--mut); padding:10px 22px; border-bottom:1px solid var(--line); flex:0 0 auto; }
+  .embed-hint b{ color:var(--txt); }
+  ::-webkit-scrollbar{ width:10px; } ::-webkit-scrollbar-thumb{ background:#2c313c; border-radius:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><b>ZPG</b> LAGER <span>· Dashboard</span></div>
+    <div class="spacer"></div>
+    <div>
+      <div class="clock" id="clock">--:--:--</div>
+      <div class="cdate" id="cdate"></div>
+      <div class="stand"><span class="live"></span>Stand: So, 19. Jul · 14:05 Uhr</div>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-view="pack">📦 Zu packen</div>
+    <div class="tab" data-view="cal">📅 Kalender</div>
+    <div class="tab" data-view="live">🗓️ Live-Kalender</div>
+    <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
+  </div>
+
+  <main>
+    <!-- Packliste -->
+    <section class="view active" id="pack">
+      <div class="summary">
+        <div class="grp"><span class="big">3</span> <span class="lbl">Projekte</span></div>
+        <div class="sep">|</div>
+        <div class="grp"><span class="big">2.231</span> <span class="lbl">Artikel gesamt</span></div>
+        <div class="sep">|</div>
+        <div class="grp"><span class="big">733</span> <span class="lbl">Positionen</span></div>
+        <div class="sep">|</div>
+        <div class="lbl">nächste 2 Wochen · Auszug (planperiod)</div>
+      </div>
+      <div class="scroll">
+        
+      <div class="card" data-raus="2026-07-21T08:00:00+02:00" style="--accent:#FF7912">
+        <div class="raus">
+          <div class="raus-wd">Di</div>
+          <div class="raus-day">21</div>
+          <div class="raus-mon">Jul</div>
+          <div class="countdown" data-raus="2026-07-21T08:00:00+02:00"></div>
+        </div>
+        <div class="mid">
+          <div class="pname">Dry Hire SimEvents <span class="badge dry">Dry&nbsp;Hire</span></div>
+          <div class="meta">SimEvents GmbH · #2026100</div>
+          <div class="dates">
+            <span class="ico">🎪</span> Einsatz: Di, 21. Jul – Di, 11. Aug<br>
+            <span class="ico">↩︎</span> Rückgabe Di, 11. Aug
+          </div>
+          <div class="subs"><span class="chip">Groundsupport</span></div>
+        </div>
+        <div class="qty">
+          <div class="qty-num">106</div>
+          <div class="qty-lbl">Artikel</div>
+          <div class="qty-pos">9 Positionen</div>
+        </div>
+      </div>
+
+      <div class="card" data-raus="2026-07-24T00:00:00+02:00" style="--accent:#FF7912">
+        <div class="raus">
+          <div class="raus-wd">Fr</div>
+          <div class="raus-day">24</div>
+          <div class="raus-mon">Jul</div>
+          <div class="countdown" data-raus="2026-07-24T00:00:00+02:00"></div>
+        </div>
+        <div class="mid">
+          <div class="pname">Surftown Destination Event / Sommerfest </div>
+          <div class="meta">Surftown GmbH · #2026019</div>
+          <div class="dates">
+            <span class="ico">🎪</span> Einsatz: Fr, 24. Jul – So, 26. Jul<br>
+            <span class="ico">↩︎</span> Rückgabe Mo, 27. Jul
+          </div>
+          <div class="subs"><span class="chip">Beschallungstechnik - Rip Curl Version</span><span class="chip">Funkgeräte</span><span class="chip">Follow Spot</span><span class="chip">Podcast Audio</span><span class="chip">Podcast Audio 2</span></div>
+        </div>
+        <div class="qty">
+          <div class="qty-num">2.065</div>
+          <div class="qty-lbl">Artikel</div>
+          <div class="qty-pos">706 Positionen</div>
+        </div>
+      </div>
+
+      <div class="card" data-raus="2026-07-27T00:00:00+02:00" style="--accent:#1414FF">
+        <div class="raus">
+          <div class="raus-wd">Mo</div>
+          <div class="raus-day">27</div>
+          <div class="raus-mon">Jul</div>
+          <div class="countdown" data-raus="2026-07-27T00:00:00+02:00"></div>
+        </div>
+        <div class="mid">
+          <div class="pname">Gerum - R1 Dryhire <span class="badge dry">Dry&nbsp;Hire</span></div>
+          <div class="meta">ProLight &amp; SoundSystems · #2026053</div>
+          <div class="dates">
+            <span class="ico">🎪</span> Einsatz: Sa, 01. Aug<br>
+            <span class="ico">↩︎</span> Rückgabe Di, 04. Aug
+          </div>
+          <div class="subs"><span class="chip">Gerum - R1 Dryhire</span></div>
+        </div>
+        <div class="qty">
+          <div class="qty-num">60</div>
+          <div class="qty-lbl">Artikel</div>
+          <div class="qty-pos">18 Positionen</div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Kalender gebacken -->
+    <section class="view" id="cal">
+      <div class="scroll">
+        
+      <div class="agenda-day">
+        <div class="aday-head">So, 19. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">Anhänger verliehen an Gerd</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Mo, 20. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">Yannick Berufsschule</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+          <div class="event" style="--cal:#FF7912">
+            <span class="etime">09:00–12:00</span>
+            <span class="esum">MG ( ZP 14 ) 10:00 Kundendienst</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Di, 21. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="etime">09:00–12:00</span>
+            <span class="esum">MG ( ZP 15 ) 10:00 Kundendienst</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Do, 23. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">Restmülltonne rausstellen</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Fr, 24. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">ToDoes vor dem WE</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">So, 26. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">Fahrerkarten zum Dani</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Mi, 29. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">Papiercontainer rausstellen</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+
+      <div class="agenda-day">
+        <div class="aday-head">Fr, 31. Jul</div>
+        
+          <div class="event" style="--cal:#FF7912">
+            <span class="allday">ganztägig</span>
+            <span class="esum">ToDoes vor dem WE</span>
+            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Live Google Kalender -->
+    <section class="view" id="live">
+      <div class="embed-hint">Live aus Google Kalender (Team · Logistik · Abwesenheit). <b>Hinweis:</b> Zeigt nur Termine, wenn das Gerät in einem ZPG-Google-Konto angemeldet ist oder die Kalender öffentlich freigegeben sind.</div>
+      <iframe id="gcal" loading="lazy" src=""></iframe>
+    </section>
+  </main>
+</div>
+
+<script>
+  var EMBED = "https://calendar.google.com/calendar/embed?src=c_cd5cdgjrtian1cm6i9ifr7dl2s%40group.calendar.google.com&color=%23F09300&src=c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3%40group.calendar.google.com&color=%233F51B5&src=c_faf7d207fa52814896c00f59ebf9292054b5c018bc808ac61f58addb5f710792%40group.calendar.google.com&color=%230B8043&ctz=Europe%2FBerlin&mode=AGENDA&wkst=2&showTitle=0&showPrint=0&showCalendars=0&showTz=0&hl=de&bgcolor=%230f1115";
+  // Uhr
+  var days=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  var mons=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+  function tick(){ var n=new Date();
+    document.getElementById('clock').textContent =
+      String(n.getHours()).padStart(2,'0')+":"+String(n.getMinutes()).padStart(2,'0')+":"+String(n.getSeconds()).padStart(2,'0');
+    document.getElementById('cdate').textContent = days[n.getDay()]+", "+n.getDate()+". "+mons[n.getMonth()]+" "+n.getFullYear();
+  }
+  tick(); setInterval(tick,1000);
+
+  // Countdown je Karte (live berechnet)
+  function midnight(d){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
+  function updateCountdowns(){
+    var now=midnight(new Date());
+    document.querySelectorAll('.countdown').forEach(function(el){
+      var r=midnight(new Date(el.getAttribute('data-raus')));
+      var diff=Math.round((r-now)/86400000);
+      var t, cls='';
+      if(diff<0){ t='läuft'; }
+      else if(diff===0){ t='HEUTE'; cls='now'; }
+      else if(diff===1){ t='MORGEN'; cls='soon'; }
+      else if(diff<=3){ t='in '+diff+' Tagen'; cls='soon'; }
+      else { t='in '+diff+' Tagen'; }
+      el.textContent=t; el.className='countdown '+cls;
+    });
+  }
+  updateCountdowns(); setInterval(updateCountdowns,3600000);
+
+  // Tabs
+  var tabs=document.querySelectorAll('.tab'), views=document.querySelectorAll('.view');
+  function show(v){
+    tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-view')===v); });
+    views.forEach(function(s){ s.classList.toggle('active', s.id===v); });
+    if(v==='live'){ var f=document.getElementById('gcal'); if(!f.src||f.src==='about:blank'||f.src===''){ f.src=EMBED; } }
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ stopAuto(); show(t.getAttribute('data-view')); }); });
+
+  // Auto-Wechsel zwischen Packen & Kalender
+  var autoTimer=null, order=['pack','cal'], idx=0;
+  var btn=document.getElementById('autobtn');
+  function startAuto(){ btn.classList.add('on'); idx=0; show(order[0]);
+    autoTimer=setInterval(function(){ idx=(idx+1)%order.length; show(order[idx]); }, 20000); }
+  function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer=null; } btn.classList.remove('on'); }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); if(autoTimer) stopAuto(); else startAuto(); });
+
+  // Seite regelmäßig neu laden, damit aktualisierte Daten übernommen werden (alle 15 Min)
+  setTimeout(function(){ location.reload(); }, 15*60*1000);
+</script>
+</body>
+</html>
