@@ -200,6 +200,87 @@ else:
     gantt_html = '<div class="empty">Noch keine kommenden Projekte geladen.<br><span style="font-size:15px">Wird beim nächsten Datenlauf aus Rentman befüllt.</span></div>'
     gantt_summary = '<span class="lbl">Zeitstrahl wird beim nächsten Rentman-Datenlauf befüllt.</span>'
 
+# ---- Rückläufer / Retour (Rückgabe im 14-Tage-Fenster) ----
+def qty_block(p):
+    if p.get("article_total_qty") is None:
+        return ""
+    return f"""<div class="qty">
+          <div class="qty-num">{de(p['article_total_qty'])}</div>
+          <div class="qty-lbl">Artikel</div>
+          <div class="qty-pos">{p.get('article_positions','?')} Positionen</div>
+        </div>"""
+
+returns = sorted(d.get("returns", []), key=lambda p: p["planperiod_end"])
+rcards = []
+for p in returns:
+    pe = parse(p["planperiod_end"])
+    us = parse(p["usageperiod_start"]); ue = parse(p["usageperiod_end"])
+    color = "#" + p.get("color", "15C7DE")
+    ev = dlabel(us) if us.date() == ue.date() else f"{dlabel(us)} – {dlabel(ue)}"
+    has_qty = p.get("article_total_qty") is not None
+    grid = "112px 1fr 168px" if has_qty else "112px 1fr"
+    rcards.append(f"""
+      <div class="card" style="--accent:{color};grid-template-columns:{grid}">
+        <div class="raus ret">
+          <div class="raus-wd">{WD[pe.weekday()]}</div>
+          <div class="raus-day">{pe.day:02d}</div>
+          <div class="raus-mon">{MON[pe.month-1]}</div>
+          <div class="countdown" data-raus="{p['planperiod_end']}"></div>
+        </div>
+        <div class="mid">
+          <div class="pname">{html.escape(p['name'])}</div>
+          <div class="meta">{html.escape(p.get('customer',''))} · #{p.get('number','')}</div>
+          <div class="dates"><span class="ico">↩︎</span> Rückgabe {dlabel(pe)} · {tlabel(pe)} Uhr<br><span class="ico">🎪</span> Einsatz war: {ev}</div>
+        </div>
+        {qty_block(p)}
+      </div>""")
+if "returns" not in d:
+    returns_html = '<div class="empty">Rückläufer werden beim nächsten Datenlauf aus Rentman befüllt.</div>'
+    returns_summary = '<span class="lbl">Wird beim nächsten Rentman-Datenlauf befüllt.</span>'
+elif not returns:
+    returns_html = '<div class="empty">Keine Rückläufer in den nächsten 14 Tagen. ☕</div>'
+    returns_summary = '<span class="lbl">nächste 2 Wochen · keine Rückgaben fällig</span>'
+else:
+    rq = sum(p.get("article_total_qty") or 0 for p in returns)
+    returns_html = "\n".join(rcards)
+    returns_summary = f'<span class="big">{len(returns)}</span> <span class="lbl">Rückläufer</span> &nbsp;·&nbsp; <span class="big">{de(rq)}</span> <span class="lbl">Artikel einzuchecken</span> &nbsp;·&nbsp; <span class="lbl">nächste 2 Wochen · Rückgabe (planperiod)</span>'
+
+# ---- Engpässe / Fehlmengen (has_missings) ----
+shortages = sorted(d.get("shortages", []), key=lambda s: s.get("planperiod_start", "9999"))
+scards = []
+for s in shortages:
+    ps = parse(s["planperiod_start"]) if s.get("planperiod_start") else None
+    color = "#" + s.get("color", "15C7DE")
+    items = s.get("items", [])
+    chips = "".join(
+        f'<span class="mchip">{html.escape(str(it.get("name","?")))}'
+        + (f' <b>−{it["short"]}</b>' if it.get("short") is not None else '')
+        + '</span>'
+        for it in items)
+    when = f'Auszug {dlabel(ps)}' if ps else ''
+    ncount = s.get("missing_count", len(items))
+    scards.append(f"""
+      <div class="scard" style="--accent:{color}">
+        <div class="shead">
+          <div>
+            <div class="pname">{html.escape(s['name'])}</div>
+            <div class="meta">{html.escape(s.get('customer',''))} · #{s.get('number','')} · {when}</div>
+          </div>
+          <div class="sbadge">{ncount} Fehlmengen</div>
+        </div>
+        <div class="mitems">{chips if chips else '<span class="mchip">Details siehe Rentman</span>'}</div>
+      </div>""")
+if "shortages" not in d:
+    shortages_html = '<div class="empty">Engpässe werden beim nächsten Datenlauf aus Rentman befüllt.</div>'
+    shortages_summary = '<span class="lbl">Wird beim nächsten Rentman-Datenlauf befüllt.</span>'
+elif not shortages:
+    shortages_html = '<div class="empty ok">Keine Materialengpässe in kommenden Projekten. 👍</div>'
+    shortages_summary = '<span class="lbl">kommende Projekte · keine Unterdeckung gemeldet</span>'
+else:
+    tot_missing = sum(s.get("missing_count", len(s.get("items", []))) for s in shortages)
+    shortages_html = "\n".join(scards)
+    shortages_summary = f'<span class="big warn">{len(shortages)}</span> <span class="lbl">Projekte mit Engpass</span> &nbsp;·&nbsp; <span class="big warn">{tot_missing}</span> <span class="lbl">Fehlmengen gesamt</span> &nbsp;·&nbsp; <span class="lbl">→ anmieten / umplanen</span>'
+
 # ---- Google Live-Embed URL (3 Kalender kombiniert) ----
 cals = d["calendars"]
 def enc(x): return quote(x, safe="")
@@ -284,6 +365,22 @@ HTML = f"""<!DOCTYPE html>
   .qty-lbl{{ font-size:15px; color:var(--mut); font-weight:700; text-transform:uppercase; letter-spacing:1px; }}
   .qty-pos{{ font-size:13px; color:var(--mut); margin-top:8px; }}
   .empty{{ text-align:center; color:var(--mut); font-size:22px; padding:60px 20px; }}
+  .empty.ok{{ color:#3ED97B; }}
+
+  /* --- Rückläufer --- */
+  .raus.ret .raus-day{{ color:#8fe3ff; }}
+
+  /* --- Engpässe / Fehlmengen --- */
+  .big.warn{{ color:#ffb454; }}
+  .scard{{ background:var(--panel); border:1px solid var(--line); border-left:8px solid var(--accent);
+           border-radius:14px; padding:16px 20px; margin-bottom:14px; }}
+  .shead{{ display:flex; align-items:center; justify-content:space-between; gap:16px; }}
+  .sbadge{{ flex:0 0 auto; font-size:15px; font-weight:800; color:#1a1205; background:#ffb454;
+            padding:6px 14px; border-radius:20px; white-space:nowrap; }}
+  .mitems{{ margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }}
+  .mchip{{ font-size:14px; background:#3a2a12; color:#ffcf8a; border:1px solid #5a3f18;
+           padding:6px 12px; border-radius:8px; }}
+  .mchip b{{ color:#ff8a5c; font-weight:800; }}
 
   /* --- Agenda --- */
   .agenda-day{{ margin-bottom:22px; }}
@@ -348,6 +445,8 @@ HTML = f"""<!DOCTYPE html>
 
   <div class="tabs">
     <div class="tab active" data-view="pack">📦 Zu packen</div>
+    <div class="tab" data-view="returns">📥 Rückläufer</div>
+    <div class="tab" data-view="short">⚠️ Engpässe</div>
     <div class="tab" data-view="plan">📊 Zeitplan</div>
     <div class="tab" data-view="cal">📅 Kalender</div>
     <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
@@ -367,6 +466,22 @@ HTML = f"""<!DOCTYPE html>
       </div>
       <div class="scroll">
         {cards_html}
+      </div>
+    </section>
+
+    <!-- Rückläufer / Retour -->
+    <section class="view" id="returns">
+      <div class="summary">{returns_summary}</div>
+      <div class="scroll">
+        {returns_html}
+      </div>
+    </section>
+
+    <!-- Engpässe / Fehlmengen -->
+    <section class="view" id="short">
+      <div class="summary">{shortages_summary}</div>
+      <div class="scroll">
+        {shortages_html}
       </div>
     </section>
 

@@ -204,5 +204,74 @@
       "usageperiod_start": "2026-09-02T09:00:00+02:00",
       "usageperiod_end": "2026-09-03T22:00:00+02:00"
     }
+  ],
+  "returns": [
+    {
+      "project_id": 1500,
+      "number": 2026011,
+      "name": "IHK Sommerempfang",
+      "customer": "IHK München",
+      "color": "15C7DE",
+      "planperiod_end": "2026-07-20T10:00:00+02:00",
+      "usageperiod_start": "2026-07-18T18:00:00+02:00",
+      "usageperiod_end": "2026-07-18T23:00:00+02:00",
+      "article_positions": 54,
+      "article_total_qty": 312
+    },
+    {
+      "project_id": 1533,
+      "number": 2026019,
+      "name": "Surftown Destination Event / Sommerfest",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "planperiod_end": "2026-07-27T08:00:00+02:00",
+      "usageperiod_start": "2026-07-24T09:00:00+02:00",
+      "usageperiod_end": "2026-07-26T14:00:00+02:00",
+      "article_positions": 706,
+      "article_total_qty": 2065
+    }
+  ],
+  "shortages": [
+    {
+      "project_id": 1533,
+      "number": 2026019,
+      "name": "Surftown Destination Event / Sommerfest",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "planperiod_start": "2026-07-24T00:00:00+02:00",
+      "missing_count": 3,
+      "items": [
+        {
+          "name": "L-Acoustics A15",
+          "short": 2
+        },
+        {
+          "name": "LA12X Verstärker",
+          "short": 1
+        },
+        {
+          "name": "XLR 20m",
+          "short": 8
+        }
+      ]
+    },
+    {
+      "project_id": 1602,
+      "number": 2026081,
+      "name": "Open Air Konzertreihe",
+      "customer": "Stadt München",
+      "color": "15C7DE",
+      "planperiod_start": "2026-08-18T06:00:00+02:00",
+      "missing_count": 2,
+      "items": [
+        {
+          "name": "Moving Head Spot",
+          "short": 4
+        },
+        {
+          "name": "Truss 3m"
+        }
+      ]
+    }
   ]
 }

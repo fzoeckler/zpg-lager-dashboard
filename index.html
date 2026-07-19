@@ -72,6 +72,22 @@
   .qty-lbl{ font-size:15px; color:var(--mut); font-weight:700; text-transform:uppercase; letter-spacing:1px; }
   .qty-pos{ font-size:13px; color:var(--mut); margin-top:8px; }
   .empty{ text-align:center; color:var(--mut); font-size:22px; padding:60px 20px; }
+  .empty.ok{ color:#3ED97B; }
+
+  /* --- Rückläufer --- */
+  .raus.ret .raus-day{ color:#8fe3ff; }
+
+  /* --- Engpässe / Fehlmengen --- */
+  .big.warn{ color:#ffb454; }
+  .scard{ background:var(--panel); border:1px solid var(--line); border-left:8px solid var(--accent);
+           border-radius:14px; padding:16px 20px; margin-bottom:14px; }
+  .shead{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .sbadge{ flex:0 0 auto; font-size:15px; font-weight:800; color:#1a1205; background:#ffb454;
+            padding:6px 14px; border-radius:20px; white-space:nowrap; }
+  .mitems{ margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
+  .mchip{ font-size:14px; background:#3a2a12; color:#ffcf8a; border:1px solid #5a3f18;
+           padding:6px 12px; border-radius:8px; }
+  .mchip b{ color:#ff8a5c; font-weight:800; }
 
   /* --- Agenda --- */
   .agenda-day{ margin-bottom:22px; }
@@ -136,6 +152,8 @@
 
   <div class="tabs">
     <div class="tab active" data-view="pack">📦 Zu packen</div>
+    <div class="tab" data-view="returns">📥 Rückläufer</div>
+    <div class="tab" data-view="short">⚠️ Engpässe</div>
     <div class="tab" data-view="plan">📊 Zeitplan</div>
     <div class="tab" data-view="cal">📅 Kalender</div>
     <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
@@ -223,6 +241,22 @@
           <div class="qty-pos">18 Positionen</div>
         </div>
       </div>
+      </div>
+    </section>
+
+    <!-- Rückläufer / Retour -->
+    <section class="view" id="returns">
+      <div class="summary"><span class="lbl">Wird beim nächsten Rentman-Datenlauf befüllt.</span></div>
+      <div class="scroll">
+        <div class="empty">Rückläufer werden beim nächsten Datenlauf aus Rentman befüllt.</div>
+      </div>
+    </section>
+
+    <!-- Engpässe / Fehlmengen -->
+    <section class="view" id="short">
+      <div class="summary"><span class="lbl">Wird beim nächsten Rentman-Datenlauf befüllt.</span></div>
+      <div class="scroll">
+        <div class="empty">Engpässe werden beim nächsten Datenlauf aus Rentman befüllt.</div>
       </div>
     </section>
 
