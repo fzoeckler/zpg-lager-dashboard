@@ -6,7 +6,7 @@ Liest data.json und erzeugt index.html (self-contained Kiosk-Dashboard).
 Aufruf: python3 build_dashboard.py [data.json] [index.html]
 """
 import json, sys, html
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import quote
 
 DATA = sys.argv[1] if len(sys.argv) > 1 else "data.json"
@@ -87,8 +87,8 @@ cards_html = "\n".join(cards) if cards else '<div class="empty">Keine Projekte i
 
 # ---- Kalender-Agenda (gebacken, immer sichtbar) ----
 CAL_META = {
-    "team": ("ZPG Team", "#FF7912"),
-    "logistik": ("Logistik", "#39A0FF"),
+    "team": ("ZPG Team", "#15C7DE"),
+    "logistik": ("Logistik", "#5B8DEF"),
     "abwesenheit": ("Abwesenheit", "#3ED97B"),
 }
 events = sorted(d.get("calendar_events", []), key=lambda e: e["start"])
@@ -122,11 +122,89 @@ for day in sorted(by_day):
 
 agenda_html = "\n".join(agenda_blocks) if agenda_blocks else '<div class="empty">Keine Termine in den nächsten 14 Tagen.</div>'
 
+# ---- Gantt / Zeitstrahl (kommende Projekte, bestätigt + Option) ----
+def iso_kw(dt):
+    return dt.isocalendar()[1]
+
+upcoming = sorted(d.get("upcoming", []), key=lambda p: p["planperiod_start"])
+gwin_start = datetime(gen.year, gen.month, gen.day)
+_ws = d.get("upcoming_window_start")
+if _ws:
+    p0 = parse(_ws); gwin_start = datetime(p0.year, p0.month, p0.day)
+_we = d.get("upcoming_window_end")
+gwin_end = parse(_we) if _we else (gwin_start + timedelta(days=56))
+gwin_end = datetime(gwin_end.year, gwin_end.month, gwin_end.day)
+gtotal = max((gwin_end - gwin_start).days, 1)
+
+def gpct(dt):
+    v = (datetime(dt.year, dt.month, dt.day, dt.hour, dt.minute) - gwin_start).total_seconds() / (gtotal * 86400) * 100
+    return max(0.0, min(100.0, v))
+
+# Wochenend-Schattierung + Wochen-Gitter/Header
+bands = []
+weekticks = []
+weeklabels = []
+day = gwin_start
+while day < gwin_end:
+    if day.weekday() >= 5:
+        l = gpct(day); w = gpct(day + timedelta(days=1)) - l
+        bands.append(f'<div class="band" style="left:{l:.3f}%;width:{w:.3f}%"></div>')
+    if day.weekday() == 0:  # Montag -> Wochenmarke
+        l = gpct(day)
+        weekticks.append(f'<div class="wtick" style="left:{l:.3f}%"></div>')
+        weeklabels.append(f'<div class="wlabel" style="left:{l:.3f}%">KW{iso_kw(day):02d}<span>{day.day:02d}.{day.month:02d}</span></div>')
+    day += timedelta(days=1)
+today_left = gpct(datetime(gen.year, gen.month, gen.day, gen.hour, gen.minute))
+today_line = f'<div class="today" style="left:{today_left:.3f}%"></div>'
+today_lbl = f'<div class="today-lbl" style="left:{today_left:.3f}%">heute</div>'
+
+grows = []
+for p in upcoming:
+    s = parse(p["planperiod_start"]); e = parse(p["planperiod_end"])
+    l = gpct(s); r = gpct(e); w = max(r - l, 1.4)
+    is_opt = str(p.get("status", "")).lower().startswith("opt")
+    cls = "opt" if is_opt else "conf"
+    us = parse(p["usageperiod_start"]); ue = parse(p["usageperiod_end"])
+    ev = dlabel(us) if us.date() == ue.date() else f"{dlabel(us)}–{dlabel(ue)}"
+    title = f"{p['name']} · {p.get('customer','')} · Auszug {dlabel(s)}–{dlabel(e)} · Einsatz {ev}"
+    label = html.escape(p["name"])
+    grows.append(f"""
+      <div class="grow">
+        <div class="glabel" title="{html.escape(title)}">{label}</div>
+        <div class="gtrack">
+          <div class="gbar {cls}" style="left:{l:.3f}%;width:{w:.3f}%" title="{html.escape(title)}">
+            <span class="gbar-txt">{label}</span>
+          </div>
+        </div>
+      </div>""")
+
+if upcoming:
+    n_conf = sum(1 for p in upcoming if not str(p.get("status","")).lower().startswith("opt"))
+    n_opt = len(upcoming) - n_conf
+    gantt_html = f"""
+      <div class="gantt-head">
+        <div class="glabel head">Projekt</div>
+        <div class="gtrack head">
+          {''.join(bands)}
+          {''.join(weekticks)}
+          {''.join(weeklabels)}
+          {today_line}{today_lbl}
+        </div>
+      </div>
+      <div class="gantt-body">
+        <div class="gantt-bands">{''.join(bands)}{''.join(weekticks)}{today_line}</div>
+        {''.join(grows)}
+      </div>"""
+    gantt_summary = f'<span class="big">{len(upcoming)}</span> <span class="lbl">Projekte</span> &nbsp;·&nbsp; <span class="dot conf"></span>{n_conf} bestätigt &nbsp; <span class="dot opt"></span>{n_opt} Option &nbsp;·&nbsp; <span class="lbl">{dlabel(gwin_start)} – {dlabel(gwin_end)}</span>'
+else:
+    gantt_html = '<div class="empty">Noch keine kommenden Projekte geladen.<br><span style="font-size:15px">Wird beim nächsten Datenlauf aus Rentman befüllt.</span></div>'
+    gantt_summary = '<span class="lbl">Zeitstrahl wird beim nächsten Rentman-Datenlauf befüllt.</span>'
+
 # ---- Google Live-Embed URL (3 Kalender kombiniert) ----
 cals = d["calendars"]
 def enc(x): return quote(x, safe="")
 embed = ("https://calendar.google.com/calendar/embed?"
-         f"src={enc(cals['team_embed_src'])}&color=%23F09300"
+         f"src={enc(cals['team_embed_src'])}&color=%2315889B"
          f"&src={enc(cals['logistik_embed_src'])}&color=%233F51B5"
          f"&src={enc(cals['abwesenheit_embed_src'])}&color=%230B8043"
          "&ctz=Europe%2FBerlin&mode=AGENDA&wkst=2&showTitle=0&showPrint=0"
@@ -139,7 +217,7 @@ HTML = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>ZPG Lager-Dashboard</title>
 <style>
-  :root{{ --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --txt:#f4f6fb; --mut:#9aa3b2; --org:#FF7912; --line:#2a2f3a; }}
+  :root{{ --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --txt:#f4f6fb; --mut:#9aa3b2; --org:#15C7DE; --org-dim:#0e7f8f; --line:#2a2f3a; }}
   *{{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }}
   html,body{{ height:100%; }}
   body{{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -217,6 +295,39 @@ HTML = f"""<!DOCTYPE html>
   .esum{{ flex:1; font-size:17px; }}
   .ecal{{ font-size:12px; font-weight:700; color:#0f1115; padding:3px 10px; border-radius:20px; }}
 
+  /* --- Gantt / Zeitplan --- */
+  #plan .scroll{{ padding:0; }}
+  .gantt-head{{ display:flex; position:sticky; top:0; z-index:5; background:var(--panel2);
+                border-bottom:2px solid var(--line); height:52px; }}
+  .glabel{{ flex:0 0 250px; padding:10px 14px; font-size:15px; color:var(--txt); overflow:hidden;
+            text-overflow:ellipsis; white-space:nowrap; border-right:1px solid var(--line); }}
+  .glabel.head{{ font-weight:800; color:var(--mut); display:flex; align-items:center; }}
+  .gtrack{{ position:relative; flex:1; height:100%; overflow:hidden; }}
+  .gtrack.head{{ height:52px; }}
+  .band{{ position:absolute; top:0; bottom:0; background:rgba(255,255,255,.035); }}
+  .wtick{{ position:absolute; top:0; bottom:0; width:1px; background:var(--line); }}
+  .wlabel{{ position:absolute; top:8px; transform:translateX(4px); font-size:12px; font-weight:700; color:var(--mut); white-space:nowrap; }}
+  .wlabel span{{ display:block; font-size:10px; font-weight:600; color:#6b7482; }}
+  .today{{ position:absolute; top:0; bottom:0; width:2px; background:var(--org); z-index:4; box-shadow:0 0 8px var(--org); }}
+  .today-lbl{{ position:absolute; top:6px; transform:translateX(-50%); font-size:11px; font-weight:800; color:#0f1115;
+               background:var(--org); padding:2px 7px; border-radius:10px; z-index:6; }}
+  .gantt-body{{ position:relative; }}
+  .gantt-bands{{ position:absolute; inset:0; left:250px; pointer-events:none; }}
+  .grow{{ display:flex; align-items:center; height:40px; border-bottom:1px solid rgba(255,255,255,.04); }}
+  .grow .glabel{{ color:var(--mut); font-size:14px; }}
+  .gbar{{ position:absolute; top:7px; height:26px; border-radius:7px; display:flex; align-items:center;
+          padding:0 10px; overflow:hidden; z-index:2; }}
+  .gbar.conf{{ background:linear-gradient(180deg,var(--org),var(--org-dim)); }}
+  .gbar.opt{{ background:repeating-linear-gradient(45deg,rgba(21,199,222,.18),rgba(21,199,222,.18) 6px,rgba(21,199,222,.06) 6px,rgba(21,199,222,.06) 12px);
+              border:1.5px dashed var(--org); }}
+  .gbar-txt{{ font-size:13px; font-weight:700; color:#08222a; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }}
+  .gbar.opt .gbar-txt{{ color:var(--txt); }}
+  .plan-summary{{ display:flex; align-items:center; gap:6px; padding:14px 22px; border-bottom:2px solid var(--line); flex:0 0 auto; font-size:15px; color:var(--mut); }}
+  .plan-summary .big{{ font-size:30px; font-weight:800; color:var(--org); }}
+  .dot{{ display:inline-block; width:13px; height:13px; border-radius:3px; margin:0 4px -1px 8px; }}
+  .dot.conf{{ background:linear-gradient(180deg,var(--org),var(--org-dim)); }}
+  .dot.opt{{ background:repeating-linear-gradient(45deg,rgba(21,199,222,.25),rgba(21,199,222,.25) 4px,rgba(21,199,222,.08) 4px,rgba(21,199,222,.08) 8px); border:1.5px dashed var(--org); }}
+
   iframe{{ width:100%; height:100%; border:0; background:#0f1115; }}
   .embed-hint{{ font-size:13px; color:var(--mut); padding:10px 22px; border-bottom:1px solid var(--line); flex:0 0 auto; }}
   .embed-hint b{{ color:var(--txt); }}
@@ -237,6 +348,7 @@ HTML = f"""<!DOCTYPE html>
 
   <div class="tabs">
     <div class="tab active" data-view="pack">📦 Zu packen</div>
+    <div class="tab" data-view="plan">📊 Zeitplan</div>
     <div class="tab" data-view="cal">📅 Kalender</div>
     <div class="tab" data-view="live">🗓️ Live-Kalender</div>
     <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
@@ -256,6 +368,14 @@ HTML = f"""<!DOCTYPE html>
       </div>
       <div class="scroll">
         {cards_html}
+      </div>
+    </section>
+
+    <!-- Zeitplan / Gantt -->
+    <section class="view" id="plan">
+      <div class="plan-summary">{gantt_summary}</div>
+      <div class="scroll">
+        {gantt_html}
       </div>
     </section>
 
@@ -314,7 +434,7 @@ HTML = f"""<!DOCTYPE html>
   tabs.forEach(function(t){{ t.addEventListener('click', function(){{ stopAuto(); show(t.getAttribute('data-view')); }}); }});
 
   // Auto-Wechsel zwischen Packen & Kalender
-  var autoTimer=null, order=['pack','cal'], idx=0;
+  var autoTimer=null, order=['pack','plan','cal'], idx=0;
   var btn=document.getElementById('autobtn');
   function startAuto(){{ btn.classList.add('on'); idx=0; show(order[0]);
     autoTimer=setInterval(function(){{ idx=(idx+1)%order.length; show(order[idx]); }}, 20000); }}

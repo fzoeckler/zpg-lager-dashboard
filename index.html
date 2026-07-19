@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>ZPG Lager-Dashboard</title>
 <style>
-  :root{ --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --txt:#f4f6fb; --mut:#9aa3b2; --org:#FF7912; --line:#2a2f3a; }
+  :root{ --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --txt:#f4f6fb; --mut:#9aa3b2; --org:#15C7DE; --org-dim:#0e7f8f; --line:#2a2f3a; }
   *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
   html,body{ height:100%; }
   body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -83,6 +83,39 @@
   .esum{ flex:1; font-size:17px; }
   .ecal{ font-size:12px; font-weight:700; color:#0f1115; padding:3px 10px; border-radius:20px; }
 
+  /* --- Gantt / Zeitplan --- */
+  #plan .scroll{ padding:0; }
+  .gantt-head{ display:flex; position:sticky; top:0; z-index:5; background:var(--panel2);
+                border-bottom:2px solid var(--line); height:52px; }
+  .glabel{ flex:0 0 250px; padding:10px 14px; font-size:15px; color:var(--txt); overflow:hidden;
+            text-overflow:ellipsis; white-space:nowrap; border-right:1px solid var(--line); }
+  .glabel.head{ font-weight:800; color:var(--mut); display:flex; align-items:center; }
+  .gtrack{ position:relative; flex:1; height:100%; overflow:hidden; }
+  .gtrack.head{ height:52px; }
+  .band{ position:absolute; top:0; bottom:0; background:rgba(255,255,255,.035); }
+  .wtick{ position:absolute; top:0; bottom:0; width:1px; background:var(--line); }
+  .wlabel{ position:absolute; top:8px; transform:translateX(4px); font-size:12px; font-weight:700; color:var(--mut); white-space:nowrap; }
+  .wlabel span{ display:block; font-size:10px; font-weight:600; color:#6b7482; }
+  .today{ position:absolute; top:0; bottom:0; width:2px; background:var(--org); z-index:4; box-shadow:0 0 8px var(--org); }
+  .today-lbl{ position:absolute; top:6px; transform:translateX(-50%); font-size:11px; font-weight:800; color:#0f1115;
+               background:var(--org); padding:2px 7px; border-radius:10px; z-index:6; }
+  .gantt-body{ position:relative; }
+  .gantt-bands{ position:absolute; inset:0; left:250px; pointer-events:none; }
+  .grow{ display:flex; align-items:center; height:40px; border-bottom:1px solid rgba(255,255,255,.04); }
+  .grow .glabel{ color:var(--mut); font-size:14px; }
+  .gbar{ position:absolute; top:7px; height:26px; border-radius:7px; display:flex; align-items:center;
+          padding:0 10px; overflow:hidden; z-index:2; }
+  .gbar.conf{ background:linear-gradient(180deg,var(--org),var(--org-dim)); }
+  .gbar.opt{ background:repeating-linear-gradient(45deg,rgba(21,199,222,.18),rgba(21,199,222,.18) 6px,rgba(21,199,222,.06) 6px,rgba(21,199,222,.06) 12px);
+              border:1.5px dashed var(--org); }
+  .gbar-txt{ font-size:13px; font-weight:700; color:#08222a; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+  .gbar.opt .gbar-txt{ color:var(--txt); }
+  .plan-summary{ display:flex; align-items:center; gap:6px; padding:14px 22px; border-bottom:2px solid var(--line); flex:0 0 auto; font-size:15px; color:var(--mut); }
+  .plan-summary .big{ font-size:30px; font-weight:800; color:var(--org); }
+  .dot{ display:inline-block; width:13px; height:13px; border-radius:3px; margin:0 4px -1px 8px; }
+  .dot.conf{ background:linear-gradient(180deg,var(--org),var(--org-dim)); }
+  .dot.opt{ background:repeating-linear-gradient(45deg,rgba(21,199,222,.25),rgba(21,199,222,.25) 4px,rgba(21,199,222,.08) 4px,rgba(21,199,222,.08) 8px); border:1.5px dashed var(--org); }
+
   iframe{ width:100%; height:100%; border:0; background:#0f1115; }
   .embed-hint{ font-size:13px; color:var(--mut); padding:10px 22px; border-bottom:1px solid var(--line); flex:0 0 auto; }
   .embed-hint b{ color:var(--txt); }
@@ -103,6 +136,7 @@
 
   <div class="tabs">
     <div class="tab active" data-view="pack">📦 Zu packen</div>
+    <div class="tab" data-view="plan">📊 Zeitplan</div>
     <div class="tab" data-view="cal">📅 Kalender</div>
     <div class="tab" data-view="live">🗓️ Live-Kalender</div>
     <button class="autobtn" id="autobtn">⟳ Auto-Wechsel</button>
@@ -193,6 +227,14 @@
       </div>
     </section>
 
+    <!-- Zeitplan / Gantt -->
+    <section class="view" id="plan">
+      <div class="plan-summary"><span class="lbl">Zeitstrahl wird beim nächsten Rentman-Datenlauf befüllt.</span></div>
+      <div class="scroll">
+        <div class="empty">Noch keine kommenden Projekte geladen.<br><span style="font-size:15px">Wird beim nächsten Datenlauf aus Rentman befüllt.</span></div>
+      </div>
+    </section>
+
     <!-- Kalender gebacken -->
     <section class="view" id="cal">
       <div class="scroll">
@@ -200,85 +242,85 @@
       <div class="agenda-day">
         <div class="aday-head">So, 19. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">Anhänger verliehen an Gerd</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Mo, 20. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">Yannick Berufsschule</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="etime">09:00–12:00</span>
             <span class="esum">MG ( ZP 14 ) 10:00 Kundendienst</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Di, 21. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="etime">09:00–12:00</span>
             <span class="esum">MG ( ZP 15 ) 10:00 Kundendienst</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Do, 23. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">Restmülltonne rausstellen</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Fr, 24. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">ToDoes vor dem WE</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">So, 26. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">Fahrerkarten zum Dani</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Mi, 29. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">Papiercontainer rausstellen</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
 
       <div class="agenda-day">
         <div class="aday-head">Fr, 31. Jul</div>
         
-          <div class="event" style="--cal:#FF7912">
+          <div class="event" style="--cal:#15C7DE">
             <span class="allday">ganztägig</span>
             <span class="esum">ToDoes vor dem WE</span>
-            <span class="ecal" style="background:#FF7912">ZPG Team</span>
+            <span class="ecal" style="background:#15C7DE">ZPG Team</span>
           </div>
       </div>
       </div>
@@ -293,7 +335,7 @@
 </div>
 
 <script>
-  var EMBED = "https://calendar.google.com/calendar/embed?src=c_cd5cdgjrtian1cm6i9ifr7dl2s%40group.calendar.google.com&color=%23F09300&src=c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3%40group.calendar.google.com&color=%233F51B5&src=c_faf7d207fa52814896c00f59ebf9292054b5c018bc808ac61f58addb5f710792%40group.calendar.google.com&color=%230B8043&ctz=Europe%2FBerlin&mode=AGENDA&wkst=2&showTitle=0&showPrint=0&showCalendars=0&showTz=0&hl=de&bgcolor=%230f1115";
+  var EMBED = "https://calendar.google.com/calendar/embed?src=c_cd5cdgjrtian1cm6i9ifr7dl2s%40group.calendar.google.com&color=%2315889B&src=c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3%40group.calendar.google.com&color=%233F51B5&src=c_faf7d207fa52814896c00f59ebf9292054b5c018bc808ac61f58addb5f710792%40group.calendar.google.com&color=%230B8043&ctz=Europe%2FBerlin&mode=AGENDA&wkst=2&showTitle=0&showPrint=0&showCalendars=0&showTz=0&hl=de&bgcolor=%230f1115";
   // Uhr
   var days=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
   var mons=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
@@ -332,7 +374,7 @@
   tabs.forEach(function(t){ t.addEventListener('click', function(){ stopAuto(); show(t.getAttribute('data-view')); }); });
 
   // Auto-Wechsel zwischen Packen & Kalender
-  var autoTimer=null, order=['pack','cal'], idx=0;
+  var autoTimer=null, order=['pack','plan','cal'], idx=0;
   var btn=document.getElementById('autobtn');
   function startAuto(){ btn.classList.add('on'); idx=0; show(order[0]);
     autoTimer=setInterval(function(){ idx=(idx+1)%order.length; show(order[idx]); }, 20000); }
