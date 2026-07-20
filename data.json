@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T13:18:54+02:00",
+  "generated_at": "2026-07-20T14:21:18+02:00",
   "window_start": "2026-07-20",
   "window_end": "2026-08-03",
   "calendars": {
@@ -8,21 +8,6 @@
     "abwesenheit_embed_src": "c_faf7d207fa52814896c00f59ebf9292054b5c018bc808ac61f58addb5f710792@group.calendar.google.com"
   },
   "projects": [
-    {
-      "project_id": 1614,
-      "number": 2026100,
-      "name": "Dry Hire SimEvents",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-21T08:00:00+02:00",
-      "planperiod_end": "2026-08-11T17:00:00+02:00",
-      "usageperiod_start": "2026-07-21T08:00:00+02:00",
-      "usageperiod_end": "2026-08-11T17:00:00+02:00",
-      "article_positions": 22,
-      "article_total_qty": 231,
-      "dryhire": true
-    },
     {
       "project_id": 1533,
       "number": 2026019,
@@ -34,8 +19,15 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 710,
-      "article_total_qty": 2069,
+      "article_positions": 892,
+      "article_total_qty": 2601,
+      "subprojects": [
+        "Podcast SetUp",
+        "Beschallungstechnik - Rip Curl Version INTERN",
+        "Funkgeräte",
+        "Follow Spot",
+        "Podcast Übergabe"
+      ],
       "dryhire": false
     },
     {
@@ -45,20 +37,23 @@
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
-      "planperiod_start": "2026-07-27T00:00:00+02:00",
+      "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T08:00:00+02:00",
+      "usageperiod_end": "2026-08-01T23:59:00+02:00",
       "article_positions": 18,
       "article_total_qty": 60,
+      "subprojects": [
+        "Gerum - R1 Dryhire"
+      ],
       "dryhire": true
     }
   ],
   "returns": [
     {
       "project_id": 1586,
-      "name": "Dry Hire - AX5",
       "number": 2026072,
+      "name": "Dry Hire - AX5",
       "customer": "Maximilian Anke",
       "color": "FF7912",
       "planperiod_end": "2026-07-20T12:00:00+02:00",
@@ -68,21 +63,9 @@
       "article_total_qty": 200
     },
     {
-      "project_id": 1621,
-      "name": "TSV - AX5",
-      "number": 2026107,
-      "customer": "TSV Türkenfeld eV 1923",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-20T12:00:00+02:00",
-      "usageperiod_start": "2026-07-18T08:00:00+02:00",
-      "usageperiod_end": "2026-07-18T16:00:00+02:00",
-      "article_positions": 12,
-      "article_total_qty": 55
-    },
-    {
       "project_id": 1617,
-      "name": "Beachparty TTC",
       "number": 2026103,
+      "name": "Beachparty TTC",
       "customer": "TTC Geltendorf",
       "color": "FF7912",
       "planperiod_end": "2026-07-20T17:00:00+02:00",
@@ -92,36 +75,57 @@
       "article_total_qty": 357.5
     },
     {
+      "project_id": 1621,
+      "number": 2026107,
+      "name": "TSV - AX5",
+      "customer": "TSV Türkenfeld eV 1923",
+      "color": "FF7912",
+      "planperiod_end": "2026-07-20T12:00:00+02:00",
+      "usageperiod_start": "2026-07-18T08:00:00+02:00",
+      "usageperiod_end": "2026-07-18T16:00:00+02:00",
+      "article_positions": 12,
+      "article_total_qty": 55
+    },
+    {
       "project_id": 1533,
-      "name": "Surftown Destination Event / Sommerfest",
       "number": 2026019,
+      "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 710,
-      "article_total_qty": 2069
+      "article_positions": 892,
+      "article_total_qty": 2601
     }
   ],
   "shortages": [
     {
       "project_id": 1614,
-      "name": "Dry Hire SimEvents",
       "number": 2026100,
+      "name": "Dry Hire SimEvents",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
       "planperiod_start": "2026-07-21T08:00:00+02:00",
-      "missing_count": 16,
+      "missing_count": 20,
       "items": [
         {
           "name": "Global Truss Cornerbrake, Länge: 2m"
+        },
+        {
+          "name": "Global Truss F Knickelement links"
+        },
+        {
+          "name": "Global Truss F Knickelement rechts"
         },
         {
           "name": "Global Truss Cornerbrake, Länge: 1m"
         },
         {
           "name": "Global Truss Tower Basement F34"
+        },
+        {
+          "name": "Global Truss Spindelfuß"
         },
         {
           "name": "Global Truss HS 8231 Doppelschelle, SILBER"
@@ -133,22 +137,13 @@
           "name": "Mikrofonkabel, XLR 3-pol, 10.00m"
         },
         {
-          "name": "Cordial Multicore mit Stagebox, 15m, 8 x XLR Input, 4 x XLR Output"
+          "name": "Cordial Multicore mit Stagebox, 15m"
         },
         {
-          "name": "Sommer CAT.7 Netzwerk Trommel, 70m, Ethercon -> Ethercon"
+          "name": "Sommer CAT.7 Netzwerk Trommel, 70m"
         },
         {
           "name": "Neutrik Ethercon-Cat Verbinder"
-        },
-        {
-          "name": "Netzwerkkabel, Cat.6a, 0,5m Patch Kabel"
-        },
-        {
-          "name": "Case Universal, 34cm x 34,5cm x 42cm"
-        },
-        {
-          "name": "Global Truss Outrigger BSB MKII"
         }
       ]
     }
@@ -156,18 +151,6 @@
   "upcoming_window_start": "2026-07-20",
   "upcoming_window_end": "2026-09-14",
   "upcoming": [
-    {
-      "project_id": 1614,
-      "number": 2026100,
-      "name": "Dry Hire SimEvents",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-21T08:00:00+02:00",
-      "planperiod_end": "2026-08-11T17:00:00+02:00",
-      "usageperiod_start": "2026-07-21T08:00:00+02:00",
-      "usageperiod_end": "2026-08-11T17:00:00+02:00"
-    },
     {
       "project_id": 1533,
       "number": 2026019,
@@ -187,10 +170,10 @@
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
-      "planperiod_start": "2026-07-27T00:00:00+02:00",
+      "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T08:00:00+02:00"
+      "usageperiod_end": "2026-08-01T23:59:00+02:00"
     },
     {
       "project_id": 1620,
@@ -251,18 +234,6 @@
       "planperiod_end": "2026-09-18T18:00:00+02:00",
       "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
-    },
-    {
-      "project_id": 1615,
-      "number": 2026101,
-      "name": "VideoART - Solta Wien - Kaisergarten 1",
-      "customer": "VideoART GmbH",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-09-10T14:00:00+02:00",
-      "planperiod_end": "2026-09-14T20:00:00+02:00",
-      "usageperiod_start": "2026-09-10T14:00:00+02:00",
-      "usageperiod_end": "2026-09-14T16:00:00+02:00"
     }
   ],
   "calendar_events": [
@@ -270,7 +241,7 @@
       "cal": "team",
       "summary": "Anhänger verliehen an Gerd",
       "start": "2026-07-19",
-      "end": "2026-07-22",
+      "end": "2026-07-23",
       "allday": true
     },
     {
