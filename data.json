@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T14:21:18+02:00",
+  "generated_at": "2026-07-20T20:09:20+02:00",
   "window_start": "2026-07-20",
   "window_end": "2026-08-03",
   "calendars": {
@@ -10,33 +10,32 @@
   "projects": [
     {
       "project_id": 1533,
-      "number": 2026019,
-      "name": "Surftown Destination Event / Sommerfest",
+      "number": "2026019",
       "customer": "Surftown GmbH",
+      "name": "Surftown Destination Event / Sommerfest",
       "color": "FF7912",
-      "status": "bestätigt",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 892,
-      "article_total_qty": 2601,
+      "article_positions": 976,
+      "article_total_qty": 2846.0,
       "subprojects": [
         "Podcast SetUp",
-        "Beschallungstechnik - Rip Curl Version INTERN",
+        "INTERN Beschallungstechnik - Rip Curl Version",
         "Funkgeräte",
         "Follow Spot",
         "Podcast Übergabe"
       ],
-      "dryhire": false
+      "dryhire": false,
+      "status": "bestätigt"
     },
     {
       "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
+      "number": "2026053",
       "customer": "ProLight & SoundSystems",
+      "name": "Gerum - R1 Dryhire",
       "color": "1414FF",
-      "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
@@ -46,13 +45,14 @@
       "subprojects": [
         "Gerum - R1 Dryhire"
       ],
-      "dryhire": true
+      "dryhire": true,
+      "status": "bestätigt"
     }
   ],
   "returns": [
     {
       "project_id": 1586,
-      "number": 2026072,
+      "number": "2026072",
       "name": "Dry Hire - AX5",
       "customer": "Maximilian Anke",
       "color": "FF7912",
@@ -63,20 +63,8 @@
       "article_total_qty": 200
     },
     {
-      "project_id": 1617,
-      "number": 2026103,
-      "name": "Beachparty TTC",
-      "customer": "TTC Geltendorf",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-20T17:00:00+02:00",
-      "usageperiod_start": "2026-07-17T12:00:00+02:00",
-      "usageperiod_end": "2026-07-20T12:00:00+02:00",
-      "article_positions": 113,
-      "article_total_qty": 357.5
-    },
-    {
       "project_id": 1621,
-      "number": 2026107,
+      "number": "2026107",
       "name": "TSV - AX5",
       "customer": "TSV Türkenfeld eV 1923",
       "color": "FF7912",
@@ -87,22 +75,34 @@
       "article_total_qty": 55
     },
     {
+      "project_id": 1617,
+      "number": "2026103",
+      "name": "Beachparty TTC",
+      "customer": "TTC Geltendorf",
+      "color": "FF7912",
+      "planperiod_end": "2026-07-20T17:00:00+02:00",
+      "usageperiod_start": "2026-07-17T12:00:00+02:00",
+      "usageperiod_end": "2026-07-20T12:00:00+02:00",
+      "article_positions": 113,
+      "article_total_qty": 357.5
+    },
+    {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 892,
-      "article_total_qty": 2601
+      "article_positions": 976,
+      "article_total_qty": 2846.0
     }
   ],
   "shortages": [
     {
       "project_id": 1614,
-      "number": 2026100,
+      "number": "2026100",
       "name": "Dry Hire SimEvents",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
@@ -137,10 +137,10 @@
           "name": "Mikrofonkabel, XLR 3-pol, 10.00m"
         },
         {
-          "name": "Cordial Multicore mit Stagebox, 15m"
+          "name": "Cordial Multicore mit Stagebox, 15m, 8 x XLR Input, 4 x XLR Output"
         },
         {
-          "name": "Sommer CAT.7 Netzwerk Trommel, 70m"
+          "name": "Sommer CAT.7 Netzwerk Trommel, 70m, Ethercon -> Ethercon"
         },
         {
           "name": "Neutrik Ethercon-Cat Verbinder"
@@ -153,7 +153,7 @@
   "upcoming": [
     {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -165,7 +165,7 @@
     },
     {
       "project_id": 1567,
-      "number": 2026053,
+      "number": "2026053",
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
@@ -177,7 +177,7 @@
     },
     {
       "project_id": 1620,
-      "number": 2026106,
+      "number": "2026106",
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "FF7912",
@@ -189,7 +189,7 @@
     },
     {
       "project_id": 1564,
-      "number": 2026050,
+      "number": "2026050",
       "name": "Surftown - Dance & Surf",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -201,9 +201,9 @@
     },
     {
       "project_id": 1575,
-      "number": 2026061,
-      "name": "Sanofi - Schweiz",
-      "customer": "Sanofi-Aventis Deutschland GmbH",
+      "number": "2026061",
+      "name": "Sanofi - Astoria",
+      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
       "color": "FF7912",
       "status": "option",
       "planperiod_start": "2026-08-31T08:00:00+02:00",
@@ -213,7 +213,7 @@
     },
     {
       "project_id": 1559,
-      "number": 2026045,
+      "number": "2026045",
       "name": "SimEvent Traversenkreis",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
@@ -225,7 +225,7 @@
     },
     {
       "project_id": 1572,
-      "number": 2026058,
+      "number": "2026058",
       "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
       "customer": "Sanofi-Aventis Deutschland GmbH",
       "color": "FF7912",
@@ -248,7 +248,7 @@
       "cal": "team",
       "summary": "Yannick Berufsschule",
       "start": "2026-07-20",
-      "end": "2026-07-24",
+      "end": "2026-07-25",
       "allday": true
     },
     {
@@ -269,42 +269,42 @@
       "cal": "team",
       "summary": "Restmülltonne rausstellen",
       "start": "2026-07-23",
-      "end": "2026-07-23",
+      "end": "2026-07-24",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "ToDoes vor dem WE",
       "start": "2026-07-24",
-      "end": "2026-07-24",
+      "end": "2026-07-25",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Fahrerkarten zum Dani",
       "start": "2026-07-26",
-      "end": "2026-07-26",
+      "end": "2026-07-27",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Papiercontainer rausstellen",
       "start": "2026-07-29",
-      "end": "2026-07-29",
+      "end": "2026-07-30",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "ToDoes vor dem WE",
       "start": "2026-07-31",
-      "end": "2026-07-31",
+      "end": "2026-08-01",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "VDE Prüfung",
       "start": "2026-08-03",
-      "end": "2026-08-07",
+      "end": "2026-08-08",
       "allday": true
     }
   ]
