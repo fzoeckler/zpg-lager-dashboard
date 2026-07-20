@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-19T21:40:00+02:00",
-  "window_start": "2026-07-19",
-  "window_end": "2026-08-02",
+  "generated_at": "2026-07-20T08:22:45+02:00",
+  "window_start": "2026-07-20",
+  "window_end": "2026-08-03",
   "calendars": {
     "team_embed_src": "c_cd5cdgjrtian1cm6i9ifr7dl2s@group.calendar.google.com",
     "logistik_embed_src": "c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3@group.calendar.google.com",
@@ -9,69 +9,69 @@
   },
   "projects": [
     {
-      "project_id": 1614,
-      "number": 2026100,
-      "name": "Dry Hire SimEvents",
-      "customer": "SimEvents GmbH",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-07-21T08:00:00+02:00",
-      "planperiod_end": "2026-08-11T17:00:00+02:00",
-      "usageperiod_start": "2026-07-21T08:00:00+02:00",
-      "usageperiod_end": "2026-08-11T17:00:00+02:00",
-      "subprojects": [
-        "Groundsupport"
-      ],
-      "article_positions": 9,
-      "article_total_qty": 106,
-      "dryhire": true
-    },
-    {
-      "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-27T00:00:00+02:00",
-      "planperiod_end": "2026-08-04T17:00:00+02:00",
-      "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T08:00:00+02:00",
-      "subprojects": [
-        "Gerum - R1 Dryhire"
-      ],
-      "article_positions": 18,
-      "article_total_qty": 60,
-      "dryhire": true
-    },
-    {
       "project_id": 1533,
-      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
+      "number": 2026019,
       "customer": "Surftown GmbH",
       "color": "FF7912",
-      "status": "bestätigt",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
+      "status": "bestätigt",
+      "dryhire": false,
+      "article_positions": 706,
+      "article_total_qty": 2065,
       "subprojects": [
         "Beschallungstechnik - Rip Curl Version",
         "Funkgeräte",
         "Follow Spot",
         "Podcast Audio",
         "Podcast Audio 2"
-      ],
-      "article_positions": 706,
-      "article_total_qty": 2065,
-      "dryhire": false
+      ]
+    },
+    {
+      "project_id": 1567,
+      "name": "Gerum - R1 Dryhire",
+      "number": 2026053,
+      "customer": "ProLight & SoundSystems ",
+      "color": "1414FF",
+      "planperiod_start": "2026-07-27T00:00:00+02:00",
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T08:00:00+02:00",
+      "status": "bestätigt",
+      "dryhire": true,
+      "article_positions": 18,
+      "article_total_qty": 60,
+      "subprojects": [
+        "Gerum - R1 Dryhire"
+      ]
+    },
+    {
+      "project_id": 1614,
+      "name": "Dry Hire SimEvents",
+      "number": 2026100,
+      "customer": "SimEvents GmbH",
+      "color": "FF7912",
+      "planperiod_start": "2026-07-21T08:00:00+02:00",
+      "planperiod_end": "2026-08-11T17:00:00+02:00",
+      "usageperiod_start": "2026-07-21T08:00:00+02:00",
+      "usageperiod_end": "2026-08-11T17:00:00+02:00",
+      "status": "option",
+      "dryhire": true,
+      "article_positions": 9,
+      "article_total_qty": 106,
+      "subprojects": [
+        "Groundsupport"
+      ]
     }
   ],
   "returns": [
     {
       "project_id": 1533,
-      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
+      "number": 2026019,
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
@@ -81,21 +81,9 @@
       "article_total_qty": 2065
     },
     {
-      "project_id": 1621,
-      "number": 2026107,
-      "name": "TSV - AX5",
-      "customer": "TSV Türkenfeld eV 1923",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-20T12:00:00+02:00",
-      "usageperiod_start": "2026-07-18T08:00:00+02:00",
-      "usageperiod_end": "2026-07-18T16:00:00+02:00",
-      "article_positions": 12,
-      "article_total_qty": 55
-    },
-    {
       "project_id": 1586,
-      "number": 2026072,
       "name": "Dry Hire - AX5",
+      "number": 2026072,
       "customer": "Maximilian Anke",
       "color": "FF7912",
       "planperiod_end": "2026-07-20T12:00:00+02:00",
@@ -106,8 +94,8 @@
     },
     {
       "project_id": 1617,
-      "number": 2026103,
       "name": "Beachparty TTC",
+      "number": 2026103,
       "customer": "TTC Geltendorf",
       "color": "FF7912",
       "planperiod_end": "2026-07-20T17:00:00+02:00",
@@ -115,12 +103,48 @@
       "usageperiod_end": "2026-07-20T12:00:00+02:00",
       "article_positions": 113,
       "article_total_qty": 357.5
+    },
+    {
+      "project_id": 1621,
+      "name": "TSV - AX5",
+      "number": 2026107,
+      "customer": "TSV Türkenfeld eV 1923",
+      "color": "FF7912",
+      "planperiod_end": "2026-07-20T12:00:00+02:00",
+      "usageperiod_start": "2026-07-18T08:00:00+02:00",
+      "usageperiod_end": "2026-07-18T16:00:00+02:00",
+      "article_positions": 12,
+      "article_total_qty": 55
     }
   ],
   "shortages": [],
-  "upcoming_window_start": "2026-07-19",
-  "upcoming_window_end": "2026-09-13",
+  "upcoming_window_start": "2026-07-20",
+  "upcoming_window_end": "2026-09-14",
   "upcoming": [
+    {
+      "project_id": 1533,
+      "number": 2026019,
+      "name": "Surftown Destination Event / Sommerfest",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-07-24T00:00:00+02:00",
+      "planperiod_end": "2026-07-27T08:00:00+02:00",
+      "usageperiod_start": "2026-07-24T09:00:00+02:00",
+      "usageperiod_end": "2026-07-26T14:00:00+02:00"
+    },
+    {
+      "project_id": 1559,
+      "number": 2026045,
+      "name": "SimEvent Traversenkreis",
+      "customer": "SimEvents GmbH",
+      "color": "1414FF",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-14T17:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-13T18:00:00+02:00"
+    },
     {
       "project_id": 1564,
       "number": 2026050,
@@ -132,6 +156,30 @@
       "planperiod_end": "2026-08-24T22:00:00+02:00",
       "usageperiod_start": "2026-08-22T08:00:00+02:00",
       "usageperiod_end": "2026-08-23T02:00:00+02:00"
+    },
+    {
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems ",
+      "color": "1414FF",
+      "status": "bestätigt",
+      "planperiod_start": "2026-07-27T00:00:00+02:00",
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T08:00:00+02:00"
+    },
+    {
+      "project_id": 1572,
+      "number": 2026058,
+      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
+      "customer": "Sanofi-Aventis Deutschland GmbH",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-18T18:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-17T18:00:00+02:00"
     },
     {
       "project_id": 1575,
@@ -192,54 +240,6 @@
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00"
-    },
-    {
-      "project_id": 1559,
-      "number": 2026045,
-      "name": "SimEvent Traversenkreis",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-14T17:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-13T18:00:00+02:00"
-    },
-    {
-      "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-27T00:00:00+02:00",
-      "planperiod_end": "2026-08-04T17:00:00+02:00",
-      "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T08:00:00+02:00"
-    },
-    {
-      "project_id": 1572,
-      "number": 2026058,
-      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
-      "customer": "Sanofi-Aventis Deutschland GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-18T18:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-17T18:00:00+02:00"
-    },
-    {
-      "project_id": 1533,
-      "number": 2026019,
-      "name": "Surftown Destination Event / Sommerfest",
-      "customer": "Surftown GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-24T09:00:00+02:00",
-      "usageperiod_end": "2026-07-26T14:00:00+02:00"
     }
   ],
   "calendar_events": [
@@ -247,14 +247,14 @@
       "cal": "team",
       "summary": "Anhänger verliehen an Gerd",
       "start": "2026-07-19",
-      "end": "2026-07-22",
+      "end": "2026-07-23",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Yannick Berufsschule",
       "start": "2026-07-20",
-      "end": "2026-07-24",
+      "end": "2026-07-25",
       "allday": true
     },
     {
@@ -275,35 +275,42 @@
       "cal": "team",
       "summary": "Restmülltonne rausstellen",
       "start": "2026-07-23",
-      "end": "2026-07-23",
+      "end": "2026-07-24",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "ToDoes vor dem WE",
       "start": "2026-07-24",
-      "end": "2026-07-24",
+      "end": "2026-07-25",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Fahrerkarten zum Dani",
       "start": "2026-07-26",
-      "end": "2026-07-26",
+      "end": "2026-07-27",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Papiercontainer rausstellen",
       "start": "2026-07-29",
-      "end": "2026-07-29",
+      "end": "2026-07-30",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "ToDoes vor dem WE",
       "start": "2026-07-31",
-      "end": "2026-07-31",
+      "end": "2026-08-01",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "VDE Prüfung",
+      "start": "2026-08-03",
+      "end": "2026-08-08",
       "allday": true
     }
   ]
