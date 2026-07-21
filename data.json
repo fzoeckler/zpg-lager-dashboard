@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T06:12:08+02:00",
+  "generated_at": "2026-07-21T07:13:10+02:00",
   "window_start": "2026-07-21",
   "window_end": "2026-08-04",
   "calendars": {
@@ -14,7 +14,6 @@
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
-      "status": "bestätigt",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
@@ -36,7 +35,6 @@
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
-      "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
@@ -85,18 +83,42 @@
       "planperiod_start": "2026-07-21T08:00:00+02:00",
       "missing_count": 20,
       "items": [
-        { "name": "Global Truss Cornerbrake, Länge: 2m" },
-        { "name": "Global Truss F Knickelement links" },
-        { "name": "Global Truss F Knickelement rechts" },
-        { "name": "Global Truss Cornerbrake, Länge: 1m" },
-        { "name": "Global Truss Tower Basement F34" },
-        { "name": "Global Truss Spindelfuß" },
-        { "name": "Global Truss HS 8231 Doppelschelle, SILBER" },
-        { "name": "Mikrofonkabel, XLR 3-pol, 5.00m" },
-        { "name": "Mikrofonkabel, XLR 3-pol, 10.00m" },
-        { "name": "Cordial Multicore mit Stagebox, 15m, 8 x XLR Input, 4 x XLR Output" },
-        { "name": "Sommer CAT.7 Netzwerk Trommel, 70m, Ethercon -> Ethercon" },
-        { "name": "Neutrik Ethercon-Cat Verbinder" }
+        {
+          "name": "Global Truss Cornerbrake, Länge: 2m"
+        },
+        {
+          "name": "Global Truss F Knickelement links"
+        },
+        {
+          "name": "Global Truss F Knickelement rechts"
+        },
+        {
+          "name": "Global Truss Cornerbrake, Länge: 1m"
+        },
+        {
+          "name": "Global Truss Tower Basement F34"
+        },
+        {
+          "name": "Global Truss Spindelfuß"
+        },
+        {
+          "name": "Global Truss HS 8231 Doppelschelle, SILBER"
+        },
+        {
+          "name": "Mikrofonkabel, XLR 3-pol, 5.00m"
+        },
+        {
+          "name": "Mikrofonkabel, XLR 3-pol, 10.00m"
+        },
+        {
+          "name": "Cordial Multicore mit Stagebox, 15m, 8 x XLR Input, 4 x XLR Output"
+        },
+        {
+          "name": "Sommer CAT.7 Netzwerk Trommel, 70m, Ethercon -> Ethercon"
+        },
+        {
+          "name": "Neutrik Ethercon-Cat Verbinder"
+        }
       ]
     }
   ],
@@ -116,28 +138,16 @@
       "usageperiod_end": "2026-07-26T14:00:00+02:00"
     },
     {
-      "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "project_id": 1559,
+      "number": 2026045,
+      "name": "SimEvent Traversenkreis",
+      "customer": "SimEvents GmbH",
       "color": "1414FF",
       "status": "bestätigt",
-      "planperiod_start": "2026-07-28T00:00:00+02:00",
-      "planperiod_end": "2026-08-04T17:00:00+02:00",
-      "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T23:59:00+02:00"
-    },
-    {
-      "project_id": 1620,
-      "number": 2026106,
-      "name": "Dry Hire Max Bauer",
-      "customer": "Bavarian - Desperados",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-08-05T08:30:00+02:00",
-      "planperiod_end": "2026-08-10T17:00:00+02:00",
-      "usageperiod_start": "2026-08-07T08:00:00+02:00",
-      "usageperiod_end": "2026-08-07T23:59:00+02:00"
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-14T17:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-13T18:00:00+02:00"
     },
     {
       "project_id": 1564,
@@ -152,28 +162,16 @@
       "usageperiod_end": "2026-08-23T02:00:00+02:00"
     },
     {
-      "project_id": 1575,
-      "number": 2026061,
-      "name": "Sanofi - Astoria",
-      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-08-31T08:00:00+02:00",
-      "planperiod_end": "2026-09-03T17:00:00+02:00",
-      "usageperiod_start": "2026-08-31T15:00:00+02:00",
-      "usageperiod_end": "2026-09-01T22:00:00+02:00"
-    },
-    {
-      "project_id": 1559,
-      "number": 2026045,
-      "name": "SimEvent Traversenkreis",
-      "customer": "SimEvents GmbH",
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-14T17:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-13T18:00:00+02:00"
+      "planperiod_start": "2026-07-28T00:00:00+02:00",
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T23:59:00+02:00"
     },
     {
       "project_id": 1572,
@@ -186,18 +184,102 @@
       "planperiod_end": "2026-09-18T18:00:00+02:00",
       "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
+    },
+    {
+      "project_id": 1575,
+      "number": 2026061,
+      "name": "Sanofi - Astoria",
+      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-08-31T08:00:00+02:00",
+      "planperiod_end": "2026-09-03T17:00:00+02:00",
+      "usageperiod_start": "2026-08-31T15:00:00+02:00",
+      "usageperiod_end": "2026-09-01T22:00:00+02:00"
+    },
+    {
+      "project_id": 1620,
+      "number": 2026106,
+      "name": "Dry Hire Max Bauer",
+      "customer": "Bavarian - Desperados",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-08-05T08:30:00+02:00",
+      "planperiod_end": "2026-08-10T17:00:00+02:00",
+      "usageperiod_start": "2026-08-07T08:00:00+02:00",
+      "usageperiod_end": "2026-08-07T23:59:00+02:00"
     }
   ],
   "calendar_events": [
-    { "cal": "team", "summary": "Anhänger verliehen an Gerd", "start": "2026-07-19", "end": "2026-07-23", "allday": true },
-    { "cal": "team", "summary": "Yannick Berufsschule", "start": "2026-07-20", "end": "2026-07-25", "allday": true },
-    { "cal": "team", "summary": "Fabi Vormittags im Home Office", "start": "2026-07-21T08:00:00+02:00", "end": "2026-07-21T12:00:00+02:00", "allday": false },
-    { "cal": "team", "summary": "MG ( ZP 15 ) 10:00 Kundendienst", "start": "2026-07-21T09:00:00+02:00", "end": "2026-07-21T12:00:00+02:00", "allday": false },
-    { "cal": "team", "summary": "Restmülltonne rausstellen", "start": "2026-07-23", "end": "2026-07-24", "allday": true },
-    { "cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-24", "end": "2026-07-25", "allday": true },
-    { "cal": "team", "summary": "Fahrerkarten zum Dani", "start": "2026-07-26", "end": "2026-07-27", "allday": true },
-    { "cal": "team", "summary": "Papiercontainer rausstellen", "start": "2026-07-29", "end": "2026-07-30", "allday": true },
-    { "cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-31", "end": "2026-08-01", "allday": true },
-    { "cal": "team", "summary": "VDE Prüfung", "start": "2026-08-03", "end": "2026-08-08", "allday": true }
+    {
+      "cal": "team",
+      "summary": "Anhänger verliehen an Gerd",
+      "start": "2026-07-19",
+      "end": "2026-07-22",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Yannick Berufsschule",
+      "start": "2026-07-20",
+      "end": "2026-07-24",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Fabi Vormittags im Home Office",
+      "start": "2026-07-21T08:00:00+02:00",
+      "end": "2026-07-21T12:00:00+02:00",
+      "allday": false
+    },
+    {
+      "cal": "team",
+      "summary": "MG ( ZP 15 ) 10:00 Kundendienst",
+      "start": "2026-07-21T09:00:00+02:00",
+      "end": "2026-07-21T12:00:00+02:00",
+      "allday": false
+    },
+    {
+      "cal": "team",
+      "summary": "Restmülltonne rausstellen",
+      "start": "2026-07-23",
+      "end": "2026-07-23",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-07-24",
+      "end": "2026-07-24",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Fahrerkarten zum Dani",
+      "start": "2026-07-26",
+      "end": "2026-07-26",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Papiercontainer rausstellen",
+      "start": "2026-07-29",
+      "end": "2026-07-29",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-07-31",
+      "end": "2026-07-31",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "VDE Prüfung",
+      "start": "2026-08-03",
+      "end": "2026-08-07",
+      "allday": true
+    }
   ]
 }
