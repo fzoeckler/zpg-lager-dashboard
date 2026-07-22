@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T06:05:00+02:00",
+  "generated_at": "2026-07-22T09:13:21+02:00",
   "window_start": "2026-07-22",
   "window_end": "2026-08-05",
   "calendars": {
@@ -20,14 +20,15 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 976,
-      "article_total_qty": 2846
+      "article_positions": 980,
+      "article_total_qty": 2850,
+      "subprojects": ["INTERN Follow Spot", "INTERN WEST", "INTERN OST", "INTERN TERRASSE"]
     },
     {
       "project_id": 1567,
       "number": "2026053",
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
       "dryhire": true,
@@ -36,7 +37,8 @@
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
       "article_positions": 18,
-      "article_total_qty": 60
+      "article_total_qty": 60,
+      "subprojects": ["Gerum - R1 Dryhire"]
     },
     {
       "project_id": 1620,
@@ -51,7 +53,8 @@
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
       "article_positions": 52,
-      "article_total_qty": 74
+      "article_total_qty": 74,
+      "subprojects": ["Dry Hire Max Bauer"]
     }
   ],
   "returns": [
@@ -64,14 +67,14 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 976,
-      "article_total_qty": 2846
+      "article_positions": 980,
+      "article_total_qty": 2850
     },
     {
       "project_id": 1567,
       "number": "2026053",
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
@@ -80,7 +83,31 @@
       "article_total_qty": 60
     }
   ],
-  "shortages": [],
+  "shortages": [
+    {
+      "project_id": 1533,
+      "number": "2026019",
+      "name": "Surftown Destination Event / Sommerfest",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "planperiod_start": "2026-07-24T00:00:00+02:00",
+      "missing_count": 72,
+      "items": [
+        {"name": "Shure Mikrofon Tasche, groß"},
+        {"name": "Shure SBC800-E Ladestadion, Netzteil"},
+        {"name": "Shure SBC800-E Ladestation für 8x SB900, Set"},
+        {"name": "Shure SBC800-E Ladestadion für 8x SB900"},
+        {"name": "Case für Shure UA874 WB UHF Richtantennen"},
+        {"name": "BNC Kabel 50 Ohm, 10.00m"},
+        {"name": "Shure Mikrofon Klemme"},
+        {"name": "Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"},
+        {"name": "Adapter Spigot 5/8'' (16mm), 1/4'' Gewinde male / 3/8'' Gewinde male"},
+        {"name": "Universalkoffer MAX300S"},
+        {"name": "Manfrotto 035 Z Super Clamp"},
+        {"name": "Kaltgeräte Kabel"}
+      ]
+    }
+  ],
   "upcoming_window_start": "2026-07-22",
   "upcoming_window_end": "2026-09-16",
   "upcoming": [
@@ -100,7 +127,7 @@
       "project_id": 1567,
       "number": "2026053",
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
@@ -170,61 +197,13 @@
     }
   ],
   "calendar_events": [
-    {
-      "cal": "team",
-      "summary": "Anhänger verliehen an Gerd",
-      "start": "2026-07-19",
-      "end": "2026-07-22",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Yannick Berufsschule",
-      "start": "2026-07-20",
-      "end": "2026-07-24",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Restmülltonne rausstellen",
-      "start": "2026-07-23",
-      "end": "2026-07-23",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "ToDoes vor dem WE",
-      "start": "2026-07-24",
-      "end": "2026-07-24",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Fahrerkarten zum Dani",
-      "start": "2026-07-26",
-      "end": "2026-07-26",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Papiercontainer rausstellen",
-      "start": "2026-07-29",
-      "end": "2026-07-29",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "ToDoes vor dem WE",
-      "start": "2026-07-31",
-      "end": "2026-07-31",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "VDE Prüfung",
-      "start": "2026-08-03",
-      "end": "2026-08-07",
-      "allday": true
-    }
+    {"cal": "team", "summary": "Anhänger verliehen an Gerd", "start": "2026-07-19", "end": "2026-07-22", "allday": true},
+    {"cal": "team", "summary": "Yannick Berufsschule", "start": "2026-07-20", "end": "2026-07-24", "allday": true},
+    {"cal": "team", "summary": "Restmülltonne rausstellen", "start": "2026-07-23", "end": "2026-07-23", "allday": true},
+    {"cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-24", "end": "2026-07-24", "allday": true},
+    {"cal": "team", "summary": "Fahrerkarten zum Dani", "start": "2026-07-26", "end": "2026-07-26", "allday": true},
+    {"cal": "team", "summary": "Papiercontainer rausstellen", "start": "2026-07-29", "end": "2026-07-29", "allday": true},
+    {"cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-31", "end": "2026-07-31", "allday": true},
+    {"cal": "team", "summary": "VDE Prüfung", "start": "2026-08-03", "end": "2026-08-07", "allday": true}
   ]
 }
