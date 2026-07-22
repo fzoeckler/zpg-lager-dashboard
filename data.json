@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T09:13:21+02:00",
+  "generated_at": "2026-07-22T15:17:47+02:00",
   "window_start": "2026-07-22",
   "window_end": "2026-08-05",
   "calendars": {
@@ -10,71 +10,77 @@
   "projects": [
     {
       "project_id": 1533,
-      "number": "2026019",
+      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
-      "status": "bestätigt",
-      "dryhire": false,
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 980,
-      "article_total_qty": 2850,
-      "subprojects": ["INTERN Follow Spot", "INTERN WEST", "INTERN OST", "INTERN TERRASSE"]
+      "article_positions": 557,
+      "article_total_qty": 1800,
+      "subprojects": [
+        "INTERN Follow Spot"
+      ],
+      "dryhire": false,
+      "status": "bestätigt"
     },
     {
       "project_id": 1567,
-      "number": "2026053",
+      "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
-      "status": "bestätigt",
-      "dryhire": true,
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
       "article_positions": 18,
       "article_total_qty": 60,
-      "subprojects": ["Gerum - R1 Dryhire"]
+      "subprojects": [
+        "Gerum - R1 Dryhire"
+      ],
+      "dryhire": true,
+      "status": "bestätigt"
     },
     {
       "project_id": 1620,
-      "number": "2026106",
+      "number": 2026106,
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
-      "status": "option",
-      "dryhire": true,
       "planperiod_start": "2026-08-05T08:30:00+02:00",
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
       "article_positions": 52,
-      "article_total_qty": 74,
-      "subprojects": ["Dry Hire Max Bauer"]
+      "article_total_qty": 73,
+      "subprojects": [
+        "Dry Hire Max Bauer"
+      ],
+      "dryhire": true,
+      "status": "option"
     }
   ],
   "returns": [
     {
       "project_id": 1533,
-      "number": "2026019",
+      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 980,
-      "article_total_qty": 2850
+      "article_positions": 557,
+      "article_total_qty": 1800
     },
     {
       "project_id": 1567,
-      "number": "2026053",
+      "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
@@ -86,25 +92,49 @@
   "shortages": [
     {
       "project_id": 1533,
-      "number": "2026019",
+      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "missing_count": 72,
+      "missing_count": 103,
       "items": [
-        {"name": "Shure Mikrofon Tasche, groß"},
-        {"name": "Shure SBC800-E Ladestadion, Netzteil"},
-        {"name": "Shure SBC800-E Ladestation für 8x SB900, Set"},
-        {"name": "Shure SBC800-E Ladestadion für 8x SB900"},
-        {"name": "Case für Shure UA874 WB UHF Richtantennen"},
-        {"name": "BNC Kabel 50 Ohm, 10.00m"},
-        {"name": "Shure Mikrofon Klemme"},
-        {"name": "Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"},
-        {"name": "Adapter Spigot 5/8'' (16mm), 1/4'' Gewinde male / 3/8'' Gewinde male"},
-        {"name": "Universalkoffer MAX300S"},
-        {"name": "Manfrotto 035 Z Super Clamp"},
-        {"name": "Kaltgeräte Kabel"}
+        {
+          "name": "Shure Mikrofon Tasche, groß"
+        },
+        {
+          "name": "Shure SBC800-E Ladestadion, Netzteil"
+        },
+        {
+          "name": "Shure SBC800-E Ladestation für 8x SB900, Set"
+        },
+        {
+          "name": "Shure SBC800-E Ladestadion für 8x SB900"
+        },
+        {
+          "name": "Case für Shure UA874 WB UHF Richtantennen"
+        },
+        {
+          "name": "BNC Kabel 50 Ohm, 10.00m"
+        },
+        {
+          "name": "Shure Mikrofon Klemme"
+        },
+        {
+          "name": " Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"
+        },
+        {
+          "name": "Adapter Spigot 5/8'' (16mm), 1/4''  Gewinde male /  3/8'' Gewinde male"
+        },
+        {
+          "name": "Universalkoffer MAX300S"
+        },
+        {
+          "name": "Manfrotto 035 Z Super Clamp"
+        },
+        {
+          "name": "Kaltgeräte Kabel"
+        }
       ]
     }
   ],
@@ -113,7 +143,7 @@
   "upcoming": [
     {
       "project_id": 1533,
-      "number": "2026019",
+      "number": 2026019,
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -125,9 +155,9 @@
     },
     {
       "project_id": 1567,
-      "number": "2026053",
+      "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
       "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
@@ -137,7 +167,7 @@
     },
     {
       "project_id": 1620,
-      "number": "2026106",
+      "number": 2026106,
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
@@ -149,7 +179,7 @@
     },
     {
       "project_id": 1564,
-      "number": "2026050",
+      "number": 2026050,
       "name": "Surftown - Dance & Surf",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -161,7 +191,7 @@
     },
     {
       "project_id": 1575,
-      "number": "2026061",
+      "number": 2026061,
       "name": "Sanofi - Astoria",
       "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
       "color": "FF7912",
@@ -172,20 +202,8 @@
       "usageperiod_end": "2026-09-01T22:00:00+02:00"
     },
     {
-      "project_id": 1559,
-      "number": "2026045",
-      "name": "SimEvent Traversenkreis",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-14T17:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-13T18:00:00+02:00"
-    },
-    {
       "project_id": 1572,
-      "number": "2026058",
+      "number": 2026058,
       "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
       "customer": "Sanofi-Aventis Deutschland GmbH",
       "color": "FF7912",
@@ -194,16 +212,76 @@
       "planperiod_end": "2026-09-18T18:00:00+02:00",
       "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
+    },
+    {
+      "project_id": 1559,
+      "number": 2026045,
+      "name": "SimEvent Traversenkreis",
+      "customer": "SimEvents GmbH",
+      "color": "1414FF",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-14T17:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-13T18:00:00+02:00"
     }
   ],
   "calendar_events": [
-    {"cal": "team", "summary": "Anhänger verliehen an Gerd", "start": "2026-07-19", "end": "2026-07-22", "allday": true},
-    {"cal": "team", "summary": "Yannick Berufsschule", "start": "2026-07-20", "end": "2026-07-24", "allday": true},
-    {"cal": "team", "summary": "Restmülltonne rausstellen", "start": "2026-07-23", "end": "2026-07-23", "allday": true},
-    {"cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-24", "end": "2026-07-24", "allday": true},
-    {"cal": "team", "summary": "Fahrerkarten zum Dani", "start": "2026-07-26", "end": "2026-07-26", "allday": true},
-    {"cal": "team", "summary": "Papiercontainer rausstellen", "start": "2026-07-29", "end": "2026-07-29", "allday": true},
-    {"cal": "team", "summary": "ToDoes vor dem WE", "start": "2026-07-31", "end": "2026-07-31", "allday": true},
-    {"cal": "team", "summary": "VDE Prüfung", "start": "2026-08-03", "end": "2026-08-07", "allday": true}
+    {
+      "cal": "team",
+      "summary": "Anhänger verliehen an Gerd",
+      "start": "2026-07-19",
+      "end": "2026-07-23",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Yannick Berufsschule",
+      "start": "2026-07-20",
+      "end": "2026-07-25",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Restmülltonne rausstellen",
+      "start": "2026-07-23",
+      "end": "2026-07-24",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-07-24",
+      "end": "2026-07-25",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Fahrerkarten zum Dani",
+      "start": "2026-07-26",
+      "end": "2026-07-27",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Papiercontainer rausstellen",
+      "start": "2026-07-29",
+      "end": "2026-07-30",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-07-31",
+      "end": "2026-08-01",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "VDE Prüfung",
+      "start": "2026-08-03",
+      "end": "2026-08-08",
+      "allday": true
+    }
   ]
 }
