@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T09:14:10+02:00",
+  "generated_at": "2026-07-23T12:14:27+02:00",
   "window_start": "2026-07-23",
   "window_end": "2026-08-06",
   "calendars": {
@@ -14,17 +14,14 @@
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
+      "status": "bestätigt",
+      "dryhire": false,
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 975,
-      "article_total_qty": 2894,
-      "subprojects": [
-        "INTERN Follow Spot"
-      ],
-      "dryhire": false,
-      "status": "bestätigt"
+      "article_positions": 204,
+      "article_total_qty": 605
     },
     {
       "project_id": 1567,
@@ -32,17 +29,14 @@
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
+      "status": "bestätigt",
+      "dryhire": true,
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 18,
-      "article_total_qty": 60,
-      "subprojects": [
-        "Gerum - R1 Dryhire"
-      ],
-      "dryhire": true,
-      "status": "bestätigt"
+      "article_positions": 2,
+      "article_total_qty": 2
     },
     {
       "project_id": 1620,
@@ -50,17 +44,14 @@
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
+      "status": "option",
+      "dryhire": true,
       "planperiod_start": "2026-08-05T08:30:00+02:00",
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
-      "article_positions": 52,
-      "article_total_qty": 74,
-      "subprojects": [
-        "Dry Hire Max Bauer"
-      ],
-      "dryhire": true,
-      "status": "option"
+      "article_positions": 5,
+      "article_total_qty": 20
     }
   ],
   "returns": [
@@ -73,8 +64,8 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 975,
-      "article_total_qty": 2894
+      "article_positions": 204,
+      "article_total_qty": 605
     },
     {
       "project_id": 1567,
@@ -85,8 +76,8 @@
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 18,
-      "article_total_qty": 60
+      "article_positions": 2,
+      "article_total_qty": 2
     }
   ],
   "shortages": [
@@ -97,43 +88,43 @@
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "missing_count": 291,
+      "missing_count": 59,
       "items": [
-        {
-          "name": "Shure Mikrofon Tasche, groß"
-        },
-        {
-          "name": "Shure SBC800-E Ladestadion, Netzteil"
-        },
         {
           "name": "Shure SBC800-E Ladestation für 8x SB900, Set"
         },
         {
-          "name": "Shure SBC800-E Ladestadion für 8x SB900"
+          "name": "Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"
         },
         {
-          "name": "Case für Shure UA874 WB UHF Richtantennen"
+          "name": "K&M 27105 Mikrofonstativ"
+        },
+        {
+          "name": "SHURE SB900B Li-Ion Akku 3,7V 1420mAh"
+        },
+        {
+          "name": "Video Adapter, BNC fem - BNC fem"
         },
         {
           "name": "BNC Kabel 50 Ohm, 10.00m"
         },
         {
-          "name": "Shure Mikrofon Klemme"
+          "name": "Shure AD4QE A Digital-Empfänger, 4-fach,  A-Band 470-636MHz, Rack"
         },
         {
-          "name": " Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"
+          "name": "BNC Kabel 50 Ohm, 5.00m"
         },
         {
-          "name": "Adapter Spigot 5/8'' (16mm), 1/4''  Gewinde male /  3/8'' Gewinde male"
+          "name": "Verbrauchsmaterial Produktions Koffer"
         },
         {
-          "name": "Universalkoffer MAX300S"
+          "name": "XLR-Kabeltrommel, 50.00m, XLR fem auf Trommel"
         },
         {
-          "name": "Manfrotto 035 Z Super Clamp"
+          "name": "XLR-Kabeltrommel, 50.00m, XLR male auf Trommel"
         },
         {
-          "name": "Kaltgeräte Kabel"
+          "name": "CODA CoRAY4-120°, 2-Wege Linienstrahler, Doppel Set"
         }
       ]
     }
