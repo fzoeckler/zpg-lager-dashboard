@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T12:14:27+02:00",
+  "generated_at": "2026-07-23T15:17:05+02:00",
   "window_start": "2026-07-23",
   "window_end": "2026-08-06",
   "calendars": {
@@ -15,28 +15,34 @@
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "status": "bestätigt",
-      "dryhire": false,
       "planperiod_start": "2026-07-24T00:00:00+02:00",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 204,
-      "article_total_qty": 605
+      "article_positions": 291,
+      "article_total_qty": 1153,
+      "subprojects": [
+        "INTERN Follow Spot"
+      ],
+      "dryhire": false
     },
     {
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
       "status": "bestätigt",
-      "dryhire": true,
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 2,
-      "article_total_qty": 2
+      "article_positions": 18,
+      "article_total_qty": 60,
+      "subprojects": [
+        "Gerum - R1 Dryhire"
+      ],
+      "dryhire": true
     },
     {
       "project_id": 1620,
@@ -45,13 +51,16 @@
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
       "status": "option",
-      "dryhire": true,
       "planperiod_start": "2026-08-05T08:30:00+02:00",
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
-      "article_positions": 5,
-      "article_total_qty": 20
+      "article_positions": 52,
+      "article_total_qty": 74,
+      "subprojects": [
+        "Dry Hire Max Bauer"
+      ],
+      "dryhire": true
     }
   ],
   "returns": [
@@ -64,71 +73,23 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 204,
-      "article_total_qty": 605
+      "article_positions": 291,
+      "article_total_qty": 1153
     },
     {
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 2,
-      "article_total_qty": 2
+      "article_positions": 18,
+      "article_total_qty": 60
     }
   ],
-  "shortages": [
-    {
-      "project_id": 1533,
-      "number": 2026019,
-      "name": "Surftown Destination Event / Sommerfest",
-      "customer": "Surftown GmbH",
-      "color": "FF7912",
-      "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "missing_count": 59,
-      "items": [
-        {
-          "name": "Shure SBC800-E Ladestation für 8x SB900, Set"
-        },
-        {
-          "name": "Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"
-        },
-        {
-          "name": "K&M 27105 Mikrofonstativ"
-        },
-        {
-          "name": "SHURE SB900B Li-Ion Akku 3,7V 1420mAh"
-        },
-        {
-          "name": "Video Adapter, BNC fem - BNC fem"
-        },
-        {
-          "name": "BNC Kabel 50 Ohm, 10.00m"
-        },
-        {
-          "name": "Shure AD4QE A Digital-Empfänger, 4-fach,  A-Band 470-636MHz, Rack"
-        },
-        {
-          "name": "BNC Kabel 50 Ohm, 5.00m"
-        },
-        {
-          "name": "Verbrauchsmaterial Produktions Koffer"
-        },
-        {
-          "name": "XLR-Kabeltrommel, 50.00m, XLR fem auf Trommel"
-        },
-        {
-          "name": "XLR-Kabeltrommel, 50.00m, XLR male auf Trommel"
-        },
-        {
-          "name": "CODA CoRAY4-120°, 2-Wege Linienstrahler, Doppel Set"
-        }
-      ]
-    }
-  ],
+  "shortages": [],
   "upcoming_window_start": "2026-07-23",
   "upcoming_window_end": "2026-09-17",
   "upcoming": [
@@ -148,7 +109,7 @@
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
+      "customer": "ProLight & SoundSystems ",
       "color": "1414FF",
       "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
