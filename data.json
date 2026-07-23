@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-22T15:17:47+02:00",
-  "window_start": "2026-07-22",
-  "window_end": "2026-08-05",
+  "generated_at": "2026-07-23T09:14:10+02:00",
+  "window_start": "2026-07-23",
+  "window_end": "2026-08-06",
   "calendars": {
     "team_embed_src": "c_cd5cdgjrtian1cm6i9ifr7dl2s@group.calendar.google.com",
     "logistik_embed_src": "c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3@group.calendar.google.com",
@@ -18,8 +18,8 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 557,
-      "article_total_qty": 1800,
+      "article_positions": 975,
+      "article_total_qty": 2894,
       "subprojects": [
         "INTERN Follow Spot"
       ],
@@ -30,7 +30,7 @@
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
@@ -55,7 +55,7 @@
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
       "article_positions": 52,
-      "article_total_qty": 73,
+      "article_total_qty": 74,
       "subprojects": [
         "Dry Hire Max Bauer"
       ],
@@ -73,14 +73,14 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 557,
-      "article_total_qty": 1800
+      "article_positions": 975,
+      "article_total_qty": 2894
     },
     {
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
@@ -97,7 +97,7 @@
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "missing_count": 103,
+      "missing_count": 291,
       "items": [
         {
           "name": "Shure Mikrofon Tasche, groß"
@@ -138,8 +138,8 @@
       ]
     }
   ],
-  "upcoming_window_start": "2026-07-22",
-  "upcoming_window_end": "2026-09-16",
+  "upcoming_window_start": "2026-07-23",
+  "upcoming_window_end": "2026-09-17",
   "upcoming": [
     {
       "project_id": 1533,
@@ -157,7 +157,7 @@
       "project_id": 1567,
       "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "status": "bestätigt",
       "planperiod_start": "2026-07-28T00:00:00+02:00",
@@ -202,18 +202,6 @@
       "usageperiod_end": "2026-09-01T22:00:00+02:00"
     },
     {
-      "project_id": 1572,
-      "number": 2026058,
-      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
-      "customer": "Sanofi-Aventis Deutschland GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-18T18:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-17T18:00:00+02:00"
-    },
-    {
       "project_id": 1559,
       "number": 2026045,
       "name": "SimEvent Traversenkreis",
@@ -224,16 +212,21 @@
       "planperiod_end": "2026-09-14T17:00:00+02:00",
       "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-13T18:00:00+02:00"
+    },
+    {
+      "project_id": 1572,
+      "number": 2026058,
+      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
+      "customer": "Sanofi-Aventis Deutschland GmbH",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-18T18:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-17T18:00:00+02:00"
     }
   ],
   "calendar_events": [
-    {
-      "cal": "team",
-      "summary": "Anhänger verliehen an Gerd",
-      "start": "2026-07-19",
-      "end": "2026-07-23",
-      "allday": true
-    },
     {
       "cal": "team",
       "summary": "Yannick Berufsschule",
@@ -281,6 +274,13 @@
       "summary": "VDE Prüfung",
       "start": "2026-08-03",
       "end": "2026-08-08",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Restmülltonne rausstellen",
+      "start": "2026-08-06",
+      "end": "2026-08-07",
       "allday": true
     }
   ]
