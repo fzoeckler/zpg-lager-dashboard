@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T14:11:18+02:00",
+  "generated_at": "2026-07-24T15:19:39+02:00",
   "window_start": "2026-07-24",
   "window_end": "2026-08-07",
   "calendars": {
@@ -10,7 +10,7 @@
   "projects": [
     {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -19,34 +19,16 @@
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 980,
-      "article_total_qty": 2899,
+      "article_positions": 209,
+      "article_total_qty": 610,
       "subprojects": [
         "INTERN Follow Spot"
       ],
       "dryhire": false
     },
     {
-      "project_id": 1623,
-      "number": 2026109,
-      "name": "musikverein tf",
-      "customer": "ZPG - Productions & Eventservice GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-25T00:00:00+02:00",
-      "usageperiod_end": "2026-07-25T08:00:00+02:00",
-      "article_positions": 2,
-      "article_total_qty": 2,
-      "subprojects": [
-        "musikverein tf"
-      ],
-      "dryhire": false
-    },
-    {
       "project_id": 1567,
-      "number": 2026053,
+      "number": "2026053",
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
@@ -55,8 +37,8 @@
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 18,
-      "article_total_qty": 60,
+      "article_positions": 2,
+      "article_total_qty": 2,
       "subprojects": [
         "Gerum - R1 Dryhire"
       ],
@@ -64,7 +46,7 @@
     },
     {
       "project_id": 1620,
-      "number": 2026106,
+      "number": "2026106",
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
@@ -73,109 +55,115 @@
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
-      "article_positions": 52,
-      "article_total_qty": 72,
+      "article_positions": 5,
+      "article_total_qty": 20,
       "subprojects": [
         "Dry Hire Max Bauer"
       ],
       "dryhire": true
+    },
+    {
+      "project_id": 1623,
+      "number": "2026109",
+      "name": "musikverein tf",
+      "customer": "ZPG - Productions & Eventservice GmbH",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-07-24T00:00:00+02:00",
+      "planperiod_end": "2026-07-27T08:00:00+02:00",
+      "usageperiod_start": "2026-07-25T00:00:00+02:00",
+      "usageperiod_end": "2026-07-25T08:00:00+02:00",
+      "article_positions": 1,
+      "article_total_qty": 1,
+      "subprojects": [
+        "musikverein tf"
+      ],
+      "dryhire": false
     }
   ],
   "returns": [
     {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_end": "2026-07-27T08:00:00+02:00",
       "usageperiod_start": "2026-07-24T09:00:00+02:00",
       "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 980,
-      "article_total_qty": 2899
-    },
-    {
-      "project_id": 1623,
-      "number": 2026109,
-      "name": "musikverein tf",
-      "customer": "ZPG - Productions & Eventservice GmbH",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-25T00:00:00+02:00",
-      "usageperiod_end": "2026-07-25T08:00:00+02:00",
-      "article_positions": 2,
-      "article_total_qty": 2
+      "article_positions": 209,
+      "article_total_qty": 610
     },
     {
       "project_id": 1567,
-      "number": 2026053,
+      "number": "2026053",
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
       "planperiod_end": "2026-08-04T17:00:00+02:00",
       "usageperiod_start": "2026-08-01T00:00:00+02:00",
       "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 18,
-      "article_total_qty": 60
+      "article_positions": 2,
+      "article_total_qty": 2
+    },
+    {
+      "project_id": 1623,
+      "number": "2026109",
+      "name": "musikverein tf",
+      "customer": "ZPG - Productions & Eventservice GmbH",
+      "color": "FF7912",
+      "planperiod_end": "2026-07-27T08:00:00+02:00",
+      "usageperiod_start": "2026-07-25T00:00:00+02:00",
+      "usageperiod_end": "2026-07-25T08:00:00+02:00",
+      "article_positions": 1,
+      "article_total_qty": 1
     }
   ],
   "shortages": [
     {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
       "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "missing_count": 296,
+      "missing_count": 64,
       "items": [
         {
-          "name": "Adam Hall 85160 Defender Office Kabelbrücke",
-          "short": 10
+          "name": "Shure SBC800-E Ladestation für 8x SB900, Set"
         },
         {
-          "name": "Mikrofonkabel, XLR 3-pol, 10.00m",
-          "short": 6
+          "name": " Shure UA874 WB UHF Richtantennen, 470 - 900 Mhz, Doppelset"
         },
         {
-          "name": "Mikrofonkabel, XLR 3-pol, 20.00m",
-          "short": 6
+          "name": "K&M 27105 Mikrofonstativ"
         },
         {
-          "name": "Schukokabel, 3x1.50qmm, 10.00m",
-          "short": 5
+          "name": "SHURE SB900B Li-Ion Akku 3,7V 1420mAh"
         },
         {
-          "name": "Schukoverteiler, 6-fach",
-          "short": 5
+          "name": "Video Adapter, BNC fem - BNC fem"
         },
         {
-          "name": "Schukoverteiler, 3-fach",
-          "short": 5
+          "name": "BNC Kabel 50 Ohm, 10.00m"
         },
         {
-          "name": "Schukokabel, 3x1.50qmm, 5.00m",
-          "short": 5
+          "name": "Shure AD4QE A Digital-Empfänger, 4-fach,  A-Band 470-636MHz, Rack"
         },
         {
-          "name": "powerCon True1 -> powerCON True1, 10.00m",
-          "short": 5
+          "name": "BNC Kabel 50 Ohm, 5.00m"
         },
         {
-          "name": "speakON-Kabel, 4 x 2.50 mm², 5.00m",
-          "short": 5
+          "name": "Verbrauchsmaterial Produktions Koffer"
         },
         {
-          "name": "speakON-Kabel, 4 x 2.50 mm², 10.00m",
-          "short": 5
+          "name": "XLR-Kabeltrommel, 50.00m, XLR fem auf Trommel"
         },
         {
-          "name": "speakON Verbinder, 4pol",
-          "short": 5
+          "name": "XLR-Kabeltrommel, 50.00m, XLR male auf Trommel"
         },
         {
-          "name": "Schukokabel, 3x1.50qmm, 10.00m",
-          "short": 5
+          "name": "CODA CoRAY4-120°, 2-Wege Linienstrahler, Doppel Set"
         }
       ]
     }
@@ -185,7 +173,7 @@
   "upcoming": [
     {
       "project_id": 1533,
-      "number": 2026019,
+      "number": "2026019",
       "name": "Surftown Destination Event / Sommerfest",
       "customer": "Surftown GmbH",
       "color": "FF7912",
@@ -196,20 +184,8 @@
       "usageperiod_end": "2026-07-26T14:00:00+02:00"
     },
     {
-      "project_id": 1623,
-      "number": 2026109,
-      "name": "musikverein tf",
-      "customer": "ZPG - Productions & Eventservice GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-07-24T00:00:00+02:00",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-25T00:00:00+02:00",
-      "usageperiod_end": "2026-07-25T08:00:00+02:00"
-    },
-    {
       "project_id": 1567,
-      "number": 2026053,
+      "number": "2026053",
       "name": "Gerum - R1 Dryhire",
       "customer": "ProLight & SoundSystems",
       "color": "1414FF",
@@ -221,7 +197,7 @@
     },
     {
       "project_id": 1620,
-      "number": 2026106,
+      "number": "2026106",
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
@@ -232,32 +208,20 @@
       "usageperiod_end": "2026-08-07T23:59:00+02:00"
     },
     {
-      "project_id": 1564,
-      "number": 2026050,
-      "name": "Surftown - Dance & Surf",
-      "customer": "Surftown GmbH",
+      "project_id": 1623,
+      "number": "2026109",
+      "name": "musikverein tf",
+      "customer": "ZPG - Productions & Eventservice GmbH",
       "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-08-21T08:00:00+02:00",
-      "planperiod_end": "2026-08-24T22:00:00+02:00",
-      "usageperiod_start": "2026-08-22T08:00:00+02:00",
-      "usageperiod_end": "2026-08-23T02:00:00+02:00"
-    },
-    {
-      "project_id": 1575,
-      "number": 2026061,
-      "name": "Sanofi - Astoria",
-      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-08-31T08:00:00+02:00",
-      "planperiod_end": "2026-09-03T17:00:00+02:00",
-      "usageperiod_start": "2026-08-31T15:00:00+02:00",
-      "usageperiod_end": "2026-09-01T22:00:00+02:00"
+      "status": "bestätigt",
+      "planperiod_start": "2026-07-24T00:00:00+02:00",
+      "planperiod_end": "2026-07-27T08:00:00+02:00",
+      "usageperiod_start": "2026-07-25T00:00:00+02:00",
+      "usageperiod_end": "2026-07-25T08:00:00+02:00"
     },
     {
       "project_id": 1559,
-      "number": 2026045,
+      "number": "2026045",
       "name": "SimEvent Traversenkreis",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
@@ -268,8 +232,20 @@
       "usageperiod_end": "2026-09-13T18:00:00+02:00"
     },
     {
+      "project_id": 1564,
+      "number": "2026050",
+      "name": "Surftown - Dance & Surf",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-08-21T08:00:00+02:00",
+      "planperiod_end": "2026-08-24T22:00:00+02:00",
+      "usageperiod_start": "2026-08-22T08:00:00+02:00",
+      "usageperiod_end": "2026-08-23T02:00:00+02:00"
+    },
+    {
       "project_id": 1572,
-      "number": 2026058,
+      "number": "2026058",
       "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
       "customer": "Sanofi-Aventis Deutschland GmbH",
       "color": "FF7912",
@@ -278,6 +254,18 @@
       "planperiod_end": "2026-09-18T18:00:00+02:00",
       "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
+    },
+    {
+      "project_id": 1575,
+      "number": "2026061",
+      "name": "Sanofi - Astoria",
+      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-08-31T08:00:00+02:00",
+      "planperiod_end": "2026-09-03T17:00:00+02:00",
+      "usageperiod_start": "2026-08-31T15:00:00+02:00",
+      "usageperiod_end": "2026-09-01T22:00:00+02:00"
     }
   ],
   "calendar_events": [
