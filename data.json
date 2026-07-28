@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-27T18:24:18+02:00",
-  "window_start": "2026-07-27",
-  "window_end": "2026-08-10",
+  "generated_at": "2026-07-28T06:13:03+02:00",
+  "window_start": "2026-07-28",
+  "window_end": "2026-08-11",
   "calendars": {
     "team_embed_src": "c_cd5cdgjrtian1cm6i9ifr7dl2s@group.calendar.google.com",
     "logistik_embed_src": "c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3@group.calendar.google.com",
@@ -10,103 +10,80 @@
   "projects": [
     {
       "project_id": 1620,
-      "name": "Dry Hire Max Bauer",
       "number": 2026106,
+      "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
       "status": "option",
-      "dryhire": true,
       "planperiod_start": "2026-08-05T08:30:00+02:00",
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
       "article_positions": 52,
       "article_total_qty": 74,
-      "subprojects": [
-        "Dry Hire Max Bauer"
-      ]
+      "dryhire": true
     }
   ],
-  "returns": [
+  "calendar_events": [
     {
-      "project_id": 1623,
-      "name": "musikverein tf",
-      "number": 2026109,
-      "customer": "ZPG - Productions & Eventservice GmbH",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-25T00:00:00+02:00",
-      "usageperiod_end": "2026-07-25T08:00:00+02:00",
-      "article_positions": 2,
-      "article_total_qty": 2
+      "cal": "team",
+      "summary": "Papiercontainer rausstellen",
+      "start": "2026-07-29",
+      "end": "2026-07-29",
+      "allday": true
     },
     {
-      "project_id": 1567,
-      "name": "Gerum - R1 Dryhire",
-      "number": 2026053,
-      "customer": "ProLight & SoundSystems",
-      "color": "1414FF",
-      "planperiod_end": "2026-08-04T17:00:00+02:00",
-      "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 24,
-      "article_total_qty": 84
+      "cal": "team",
+      "summary": "Dani 13:15 Zahnarzt Termin",
+      "start": "2026-07-29T12:00:00+02:00",
+      "end": "2026-07-29T14:00:00+02:00",
+      "allday": false
     },
     {
-      "project_id": 1533,
-      "name": "Surftown Destination Event / Sommerfest",
-      "number": 2026019,
-      "customer": "Surftown GmbH",
-      "color": "FF7912",
-      "planperiod_end": "2026-07-27T08:00:00+02:00",
-      "usageperiod_start": "2026-07-24T09:00:00+02:00",
-      "usageperiod_end": "2026-07-26T14:00:00+02:00",
-      "article_positions": 989,
-      "article_total_qty": 2928
-    }
-  ],
-  "shortages": [
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-07-31",
+      "end": "2026-07-31",
+      "allday": true
+    },
     {
-      "project_id": 1567,
-      "name": "Gerum - R1 Dryhire",
-      "number": 2026053,
-      "customer": "ProLight & SoundSystems",
-      "color": "1414FF",
-      "planperiod_start": "2026-07-28T00:00:00+02:00",
-      "missing_count": 24,
-      "items": [
-        {
-          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
-        },
-        {
-          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Omega Bracket für Chauvet Maverick Serie, schwarz"
-        },
-        {
-          "name": "Trusst CTC-50G Clamp (250kg)"
-        },
-        {
-          "name": "Safety/Fangseil, 16kg, 1000x4mm"
-        },
-        {
-          "name": "Quick Link 4mm Schnellverbinder, schwarz"
-        },
-        {
-          "name": "Adapterkabel, Schuko-Stecker -> powerCON True1, 1.50m"
-        },
-        {
-          "name": "Adapterkabel, powerCon True 1 -> powerCon blau, 1m"
-        }
-      ]
+      "cal": "team",
+      "summary": "VDE Prüfung",
+      "start": "2026-08-03",
+      "end": "2026-08-07",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Restmülltonne rausstellen",
+      "start": "2026-08-06",
+      "end": "2026-08-06",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Stephan Urlaub",
+      "start": "2026-08-07",
+      "end": "2026-08-11",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-08-07",
+      "end": "2026-08-07",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "VDE Prüfung Teil 2",
+      "start": "2026-08-10",
+      "end": "2026-08-10",
+      "allday": true
     }
   ],
-  "upcoming_window_start": "2026-07-27",
-  "upcoming_window_end": "2026-09-21",
+  "upcoming_window_start": "2026-07-28",
+  "upcoming_window_end": "2026-09-22",
   "upcoming": [
     {
       "project_id": 1620,
@@ -153,66 +130,83 @@
       "status": "bestätigt",
       "planperiod_start": "2026-09-10T08:00:00+02:00",
       "planperiod_end": "2026-09-18T18:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_start": "2026-09-13T18:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
     }
   ],
-  "calendar_events": [
+  "returns": [
     {
-      "cal": "team",
-      "summary": "Papiercontainer rausstellen",
-      "start": "2026-07-29",
-      "end": "2026-07-30",
-      "allday": true
+      "project_id": 1614,
+      "number": 2026100,
+      "name": "Dry Hire SimEvents",
+      "customer": "SimEvents GmbH",
+      "color": "1414FF",
+      "planperiod_end": "2026-08-11T17:00:00+02:00",
+      "usageperiod_start": "2026-07-21T08:00:00+02:00",
+      "usageperiod_end": "2026-08-11T17:00:00+02:00",
+      "article_positions": 22,
+      "article_total_qty": 225
     },
     {
-      "cal": "team",
-      "summary": "Dani 13:15 Zahnarzt Termin",
-      "start": "2026-07-29T12:00:00+02:00",
-      "end": "2026-07-29T14:00:00+02:00",
-      "allday": false
-    },
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems",
+      "color": "1414FF",
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T23:59:00+02:00",
+      "article_positions": 24,
+      "article_total_qty": 84
+    }
+  ],
+  "shortages": [
     {
-      "cal": "team",
-      "summary": "ToDoes vor dem WE",
-      "start": "2026-07-31",
-      "end": "2026-08-01",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "VDE Prüfung",
-      "start": "2026-08-03",
-      "end": "2026-08-08",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Restmülltonne rausstellen",
-      "start": "2026-08-06",
-      "end": "2026-08-07",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Stephan Urlaub",
-      "start": "2026-08-07",
-      "end": "2026-08-12",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "ToDoes vor dem WE",
-      "start": "2026-08-07",
-      "end": "2026-08-08",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "VDE Prüfung Teil 2",
-      "start": "2026-08-10",
-      "end": "2026-08-15",
-      "allday": true
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems",
+      "color": "1414FF",
+      "planperiod_start": "2026-07-28T00:00:00+02:00",
+      "missing_count": 24,
+      "items": [
+        {
+          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
+        },
+        {
+          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Omega Bracket für Chauvet Maverick Serie, schwarz"
+        },
+        {
+          "name": "Trusst CTC-50G Clamp (250kg)"
+        },
+        {
+          "name": "Safety/Fangseil, 16kg, 1000x4mm"
+        },
+        {
+          "name": "Quick Link 4mm Schnellverbinder, schwarz"
+        },
+        {
+          "name": "Adapterkabel, Schuko-Stecker -> powerCON True1, 1.50m"
+        },
+        {
+          "name": "Adapterkabel, powerCon True 1 -> powerCon blau, 1m"
+        },
+        {
+          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
+        },
+        {
+          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Chauvet Rogue R1 LED Beam Wash"
+        }
+      ]
     }
   ]
 }
