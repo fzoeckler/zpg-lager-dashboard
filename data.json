@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T06:13:03+02:00",
+  "generated_at": "2026-07-28T09:16:39+02:00",
   "window_start": "2026-07-28",
   "window_end": "2026-08-11",
   "calendars": {
@@ -22,6 +22,133 @@
       "article_positions": 52,
       "article_total_qty": 74,
       "dryhire": true
+    }
+  ],
+  "returns": [
+    {
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems ",
+      "color": "1414FF",
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T23:59:00+02:00",
+      "article_positions": 24,
+      "article_total_qty": 84
+    },
+    {
+      "project_id": 1614,
+      "number": 2026100,
+      "name": "Dry Hire SimEvents",
+      "customer": "SimEvents GmbH",
+      "color": "1414FF",
+      "planperiod_end": "2026-08-11T17:00:00+02:00",
+      "usageperiod_start": "2026-07-21T08:00:00+02:00",
+      "usageperiod_end": "2026-08-11T17:00:00+02:00",
+      "article_positions": 22,
+      "article_total_qty": 225
+    }
+  ],
+  "shortages": [
+    {
+      "project_id": 1567,
+      "number": 2026053,
+      "name": "Gerum - R1 Dryhire",
+      "customer": "ProLight & SoundSystems ",
+      "color": "1414FF",
+      "planperiod_start": "2026-07-28T00:00:00+02:00",
+      "missing_count": 24,
+      "items": [
+        {
+          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
+        },
+        {
+          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Omega Bracket für Chauvet Maverick Serie, schwarz"
+        },
+        {
+          "name": "Trusst CTC-50G Clamp (250kg)"
+        },
+        {
+          "name": "Safety/Fangseil, 16kg, 1000x4mm"
+        },
+        {
+          "name": "Quick Link 4mm Schnellverbinder, schwarz"
+        },
+        {
+          "name": "Adapterkabel, Schuko-Stecker -> powerCON True1, 1.50m"
+        },
+        {
+          "name": "Adapterkabel, powerCon True 1 -> powerCon blau, 1m"
+        },
+        {
+          "name": "Chauvet Rogue R1 Beam Wash 6er, Set (nur zwei)"
+        },
+        {
+          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
+        },
+        {
+          "name": "Chauvet Rogue R1 LED Beam Wash"
+        }
+      ]
+    }
+  ],
+  "upcoming_window_start": "2026-07-28",
+  "upcoming_window_end": "2026-09-22",
+  "upcoming": [
+    {
+      "project_id": 1575,
+      "number": 2026061,
+      "name": "Sanofi - Astoria",
+      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-08-31T08:00:00+02:00",
+      "planperiod_end": "2026-09-03T17:00:00+02:00",
+      "usageperiod_start": "2026-08-31T15:00:00+02:00",
+      "usageperiod_end": "2026-09-01T22:00:00+02:00"
+    },
+    {
+      "project_id": 1620,
+      "number": 2026106,
+      "name": "Dry Hire Max Bauer",
+      "customer": "Bavarian - Desperados",
+      "color": "1414FF",
+      "status": "option",
+      "planperiod_start": "2026-08-05T08:30:00+02:00",
+      "planperiod_end": "2026-08-10T17:00:00+02:00",
+      "usageperiod_start": "2026-08-07T08:00:00+02:00",
+      "usageperiod_end": "2026-08-07T23:59:00+02:00"
+    },
+    {
+      "project_id": 1559,
+      "number": 2026045,
+      "name": "SimEvent Traversenkreis",
+      "customer": "SimEvents GmbH",
+      "color": "1414FF",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-14T17:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-13T18:00:00+02:00"
+    },
+    {
+      "project_id": 1572,
+      "number": 2026058,
+      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
+      "customer": "Sanofi-Aventis Deutschland GmbH",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-10T08:00:00+02:00",
+      "planperiod_end": "2026-09-18T18:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
+      "usageperiod_end": "2026-09-17T18:00:00+02:00"
     }
   ],
   "calendar_events": [
@@ -78,135 +205,8 @@
       "cal": "team",
       "summary": "VDE Prüfung Teil 2",
       "start": "2026-08-10",
-      "end": "2026-08-10",
+      "end": "2026-08-14",
       "allday": true
-    }
-  ],
-  "upcoming_window_start": "2026-07-28",
-  "upcoming_window_end": "2026-09-22",
-  "upcoming": [
-    {
-      "project_id": 1620,
-      "number": 2026106,
-      "name": "Dry Hire Max Bauer",
-      "customer": "Bavarian - Desperados",
-      "color": "1414FF",
-      "status": "option",
-      "planperiod_start": "2026-08-05T08:30:00+02:00",
-      "planperiod_end": "2026-08-10T17:00:00+02:00",
-      "usageperiod_start": "2026-08-07T08:00:00+02:00",
-      "usageperiod_end": "2026-08-07T23:59:00+02:00"
-    },
-    {
-      "project_id": 1575,
-      "number": 2026061,
-      "name": "Sanofi - Astoria",
-      "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
-      "color": "FF7912",
-      "status": "option",
-      "planperiod_start": "2026-08-31T08:00:00+02:00",
-      "planperiod_end": "2026-09-03T17:00:00+02:00",
-      "usageperiod_start": "2026-08-31T15:00:00+02:00",
-      "usageperiod_end": "2026-09-01T22:00:00+02:00"
-    },
-    {
-      "project_id": 1559,
-      "number": 2026045,
-      "name": "SimEvent Traversenkreis",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-14T17:00:00+02:00",
-      "usageperiod_start": "2026-09-13T08:00:00+02:00",
-      "usageperiod_end": "2026-09-13T18:00:00+02:00"
-    },
-    {
-      "project_id": 1572,
-      "number": 2026058,
-      "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
-      "customer": "Sanofi-Aventis Deutschland GmbH",
-      "color": "FF7912",
-      "status": "bestätigt",
-      "planperiod_start": "2026-09-10T08:00:00+02:00",
-      "planperiod_end": "2026-09-18T18:00:00+02:00",
-      "usageperiod_start": "2026-09-13T18:00:00+02:00",
-      "usageperiod_end": "2026-09-17T18:00:00+02:00"
-    }
-  ],
-  "returns": [
-    {
-      "project_id": 1614,
-      "number": 2026100,
-      "name": "Dry Hire SimEvents",
-      "customer": "SimEvents GmbH",
-      "color": "1414FF",
-      "planperiod_end": "2026-08-11T17:00:00+02:00",
-      "usageperiod_start": "2026-07-21T08:00:00+02:00",
-      "usageperiod_end": "2026-08-11T17:00:00+02:00",
-      "article_positions": 22,
-      "article_total_qty": 225
-    },
-    {
-      "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
-      "color": "1414FF",
-      "planperiod_end": "2026-08-04T17:00:00+02:00",
-      "usageperiod_start": "2026-08-01T00:00:00+02:00",
-      "usageperiod_end": "2026-08-01T23:59:00+02:00",
-      "article_positions": 24,
-      "article_total_qty": 84
-    }
-  ],
-  "shortages": [
-    {
-      "project_id": 1567,
-      "number": 2026053,
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems",
-      "color": "1414FF",
-      "planperiod_start": "2026-07-28T00:00:00+02:00",
-      "missing_count": 24,
-      "items": [
-        {
-          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
-        },
-        {
-          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Omega Bracket für Chauvet Maverick Serie, schwarz"
-        },
-        {
-          "name": "Trusst CTC-50G Clamp (250kg)"
-        },
-        {
-          "name": "Safety/Fangseil, 16kg, 1000x4mm"
-        },
-        {
-          "name": "Quick Link 4mm Schnellverbinder, schwarz"
-        },
-        {
-          "name": "Adapterkabel, Schuko-Stecker -> powerCON True1, 1.50m"
-        },
-        {
-          "name": "Adapterkabel, powerCon True 1 -> powerCon blau, 1m"
-        },
-        {
-          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
-        },
-        {
-          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Chauvet Rogue R1 LED Beam Wash"
-        }
-      ]
     }
   ]
 }
