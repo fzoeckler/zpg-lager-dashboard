@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-28T12:17:00+02:00",
-  "window_start": "2026-07-28",
-  "window_end": "2026-08-11",
+  "generated_at": "2026-08-03T14:18:11+02:00",
+  "window_start": "2026-08-03",
+  "window_end": "2026-08-17",
   "calendars": {
     "team_embed_src": "c_cd5cdgjrtian1cm6i9ifr7dl2s@group.calendar.google.com",
     "logistik_embed_src": "c_753c51b50a0994060e8c78527b8951a05ddaa9d0754d1adb2c6f671a9f3f2cc3@group.calendar.google.com",
@@ -10,7 +10,7 @@
   "projects": [
     {
       "project_id": 1620,
-      "number": "2026106",
+      "number": 2026106,
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
@@ -21,90 +21,45 @@
       "usageperiod_end": "2026-08-07T23:59:00+02:00",
       "article_positions": 52,
       "article_total_qty": 74,
+      "subprojects": [
+        "Dry Hire Max Bauer"
+      ],
       "dryhire": true
     }
   ],
   "returns": [
     {
       "project_id": 1567,
-      "number": "2026053",
+      "number": 2026053,
       "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
+      "customer": "ProLight & SoundSystems",
       "color": "1414FF",
-      "planperiod_end": "2026-08-04",
-      "usageperiod_start": "2026-08-01",
-      "usageperiod_end": "2026-08-01",
-      "article_positions": 24,
-      "article_total_qty": 84
+      "planperiod_end": "2026-08-04T17:00:00+02:00",
+      "usageperiod_start": "2026-08-01T00:00:00+02:00",
+      "usageperiod_end": "2026-08-01T23:59:00+02:00",
+      "article_positions": 22,
+      "article_total_qty": 225
     },
     {
       "project_id": 1614,
-      "number": "2026100",
+      "number": 2026100,
       "name": "Dry Hire SimEvents",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
-      "planperiod_end": "2026-08-11",
-      "usageperiod_start": "2026-07-21",
-      "usageperiod_end": "2026-08-11",
-      "article_positions": 22,
-      "article_total_qty": 225
+      "planperiod_end": "2026-08-11T17:00:00+02:00",
+      "usageperiod_start": "2026-07-21T08:00:00+02:00",
+      "usageperiod_end": "2026-08-11T17:00:00+02:00",
+      "article_positions": 24,
+      "article_total_qty": 84
     }
   ],
-  "shortages": [
-    {
-      "project_id": 1567,
-      "number": "2026053",
-      "name": "Gerum - R1 Dryhire",
-      "customer": "ProLight & SoundSystems ",
-      "color": "1414FF",
-      "planperiod_start": "2026-07-28",
-      "missing_count": 24,
-      "items": [
-        {
-          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
-        },
-        {
-          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Omega Bracket für Chauvet Maverick Serie, schwarz"
-        },
-        {
-          "name": "Trusst CTC-50G Clamp (250kg)"
-        },
-        {
-          "name": "Safety/Fangseil, 16kg, 1000x4mm"
-        },
-        {
-          "name": "Quick Link 4mm Schnellverbinder, schwarz"
-        },
-        {
-          "name": "Adapterkabel, Schuko-Stecker -> powerCON True1, 1.50m"
-        },
-        {
-          "name": "Adapterkabel, powerCon True 1 -> powerCon blau, 1m"
-        },
-        {
-          "name": "Chauvet Rogue R1 Beam Wash 6er, Set"
-        },
-        {
-          "name": "Case für 6x Chauvet Rogue R1 LED Beam Wash"
-        },
-        {
-          "name": "Chauvet Rogue R1 LED Beam Wash"
-        }
-      ]
-    }
-  ],
-  "upcoming_window_start": "2026-07-28",
-  "upcoming_window_end": "2026-09-22",
+  "shortages": [],
+  "upcoming_window_start": "2026-08-03",
+  "upcoming_window_end": "2026-09-28",
   "upcoming": [
     {
       "project_id": 1559,
-      "number": "2026045",
+      "number": 2026045,
       "name": "SimEvent Traversenkreis",
       "customer": "SimEvents GmbH",
       "color": "1414FF",
@@ -115,20 +70,32 @@
       "usageperiod_end": "2026-09-13T18:00:00+02:00"
     },
     {
+      "project_id": 1563,
+      "number": 2026049,
+      "name": "Plural - Founders Summit 26",
+      "customer": "AOK Events",
+      "color": "FF7912",
+      "status": "bestätigt",
+      "planperiod_start": "2026-09-28T08:00:00+02:00",
+      "planperiod_end": "2026-10-02T17:00:00+02:00",
+      "usageperiod_start": "2026-09-29T08:00:00+02:00",
+      "usageperiod_end": "2026-09-30T23:00:00+02:00"
+    },
+    {
       "project_id": 1572,
-      "number": "2026058",
+      "number": 2026058,
       "name": "Unittagung Respi | 14.-16.09.2026 | Berlin Hotel Moa",
       "customer": "Sanofi-Aventis Deutschland GmbH",
       "color": "FF7912",
       "status": "bestätigt",
       "planperiod_start": "2026-09-10T08:00:00+02:00",
       "planperiod_end": "2026-09-18T18:00:00+02:00",
-      "usageperiod_start": "2026-09-13T18:00:00+02:00",
+      "usageperiod_start": "2026-09-13T08:00:00+02:00",
       "usageperiod_end": "2026-09-17T18:00:00+02:00"
     },
     {
       "project_id": 1575,
-      "number": "2026061",
+      "number": 2026061,
       "name": "Sanofi - Astoria",
       "customer": "sanofi-aventis (suisse) sa Accounting for Recall",
       "color": "FF7912",
@@ -139,8 +106,20 @@
       "usageperiod_end": "2026-09-01T22:00:00+02:00"
     },
     {
+      "project_id": 1613,
+      "number": 2026099,
+      "name": "FOA Institut @ Bachmair",
+      "customer": "FOA Institut GmbH",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-09-24T08:00:00+02:00",
+      "planperiod_end": "2026-09-25T23:30:00+02:00",
+      "usageperiod_start": "2026-09-24T15:00:00+02:00",
+      "usageperiod_end": "2026-09-25T22:15:00+02:00"
+    },
+    {
       "project_id": 1620,
-      "number": "2026106",
+      "number": 2026106,
       "name": "Dry Hire Max Bauer",
       "customer": "Bavarian - Desperados",
       "color": "1414FF",
@@ -149,63 +128,82 @@
       "planperiod_end": "2026-08-10T17:00:00+02:00",
       "usageperiod_start": "2026-08-07T08:00:00+02:00",
       "usageperiod_end": "2026-08-07T23:59:00+02:00"
+    },
+    {
+      "project_id": 1631,
+      "number": 2026117,
+      "name": "Surftown - Rip Curl Grom Search",
+      "customer": "Surftown GmbH",
+      "color": "FF7912",
+      "status": "option",
+      "planperiod_start": "2026-09-18T00:00:00+02:00",
+      "planperiod_end": "2026-09-21T08:00:00+02:00",
+      "usageperiod_start": "2026-09-18T08:00:00+02:00",
+      "usageperiod_end": "2026-09-20T13:00:00+02:00"
     }
   ],
   "calendar_events": [
     {
       "cal": "team",
-      "summary": "Papiercontainer rausstellen",
-      "start": "2026-07-29",
-      "end": "2026-07-29",
-      "allday": true
-    },
-    {
-      "cal": "team",
-      "summary": "Dani 13:15 Zahnarzt Termin",
-      "start": "2026-07-29T12:00:00+02:00",
-      "end": "2026-07-29T14:00:00+02:00",
-      "allday": false
-    },
-    {
-      "cal": "team",
-      "summary": "ToDoes vor dem WE",
-      "start": "2026-07-31",
-      "end": "2026-07-31",
-      "allday": true
-    },
-    {
-      "cal": "team",
       "summary": "VDE Prüfung",
       "start": "2026-08-03",
-      "end": "2026-08-07",
+      "end": "2026-08-08",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Movano Rückruf 08:30 - 16:00",
+      "start": "2026-08-05",
+      "end": "2026-08-06",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Restmülltonne rausstellen",
       "start": "2026-08-06",
-      "end": "2026-08-06",
+      "end": "2026-08-07",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "Stephan Urlaub",
       "start": "2026-08-07",
-      "end": "2026-08-11",
+      "end": "2026-08-12",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "ToDoes vor dem WE",
       "start": "2026-08-07",
-      "end": "2026-08-07",
+      "end": "2026-08-08",
       "allday": true
     },
     {
       "cal": "team",
       "summary": "VDE Prüfung Teil 2",
       "start": "2026-08-10",
-      "end": "2026-08-10",
+      "end": "2026-08-15",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Papiercontainer rausstellen",
+      "start": "2026-08-12",
+      "end": "2026-08-13",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "Fabi im Urlaub",
+      "start": "2026-08-14",
+      "end": "2026-09-07",
+      "allday": true
+    },
+    {
+      "cal": "team",
+      "summary": "ToDoes vor dem WE",
+      "start": "2026-08-14",
+      "end": "2026-08-15",
       "allday": true
     }
   ]
